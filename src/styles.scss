@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './vars.scss';
+@import './mixins.scss';
 
 // /. imports
 
@@ -20,7 +21,6 @@ button {
 }
 
 input {
-    outline: none;
     border: none;
 }
 
@@ -35,12 +35,25 @@ svg {
     flex-shrink: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 // ./ nullstyles
 
 
 html,
 body {
-    font-size: 14px;
+    font-size: #{$font-size}px;
     height: 100%;
 }
 
@@ -49,29 +62,113 @@ body {
     padding: 0;
     background-color: $primary-color;
     font-family: 'Gilroy-Medium', sans-serif;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .main {
     flex: 1 0 auto;
     background-color: $white-color;
+    padding: useRem(92) 0 useRem(234);
 }
 
 .container {
-    max-width: 1380px;
-    padding: 0 0.8rem;
+    max-width: useRem(1380);
+    padding: 0 useRem(10);
     margin: 0 auto;
 }
 
 .container--footer {
-    max-width: 1240px;
+    max-width: useRem(1240);
 }
 
+.container--section {
+    max-width: useRem(930);
+}
+
+
 .logo {
-    font-size: 2rem;
-    line-height: 2.3rem;
-    letter-spacing: 0.025rem;
+    font-size: useRem(28);
+    line-height: useRem(33);
+    letter-spacing: useRem(0.5);
     font-weight: 700;
     text-transform: capitalize;
     color: #FFF;
+}
+
+.welcome {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: useRem(80);
+        margin: 0 0 useRem(14) 0;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-size: useRem(24);
+        margin: 0 0 useRem(45) 0;
+        opacity: .8;
+        text-align: center;
+    }
+
+
+}
+
+.form {
+    position: relative;
+
+    &__input {
+        max-width: useRem(344);
+        width: 100%;
+        font-size: useRem(18);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid #000;
+        border-radius: useRem(42);
+        padding: useRem(15) useRem(36) useRem(15) useRem(20);
+
+        &::-webkit-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::-moz-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &:-ms-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::-ms-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: useRem(8);
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $orange-color;
+        width: useRem(40);
+        height: useRem(40);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

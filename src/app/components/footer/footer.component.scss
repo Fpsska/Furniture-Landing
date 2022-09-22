@@ -1,4 +1,5 @@
 @import '../../../vars.scss';
+@import '../../../mixins.scss';
 
 // /. imports
 
@@ -9,17 +10,17 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        padding: 8.7rem 13.4rem 4rem 13.4rem;
+        padding: useRem(118) useRem(188) useRem(56) useRem(188);
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
-        margin: 0 0 8.4rem 0;
+        margin: 0 0 useRem(118) 0;
     }
 
     &__text {
-        max-width: 21.5rem;
+        max-width: useRem(300);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -28,12 +29,14 @@
     &__logo {
         display: block;
         color: $dark-color;
-        margin: 0 0 1rem 0;
+        margin: 0 0 useRem(14) 0;
     }
 
     &__description {
         margin: 0;
         font-weight: 500;
+        font-size: useRem(15);
+        line-height: useRem(20);
     }
 
     &__copyright {
@@ -57,6 +60,6 @@
     }
 
     &__terms {
-        margin: 0 2.8rem 0 auto;
+        margin: 0 useRem(40) 0 auto;
     }
 }

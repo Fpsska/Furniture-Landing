@@ -1,0 +1,8 @@
+@import './vars.scss';
+
+// /. imports
+
+@function useRem($size) {
+    $remSize: #{$size / $font-size}rem;
+    @return $remSize;
+}

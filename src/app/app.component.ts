@@ -8,5 +8,7 @@ import { Component } from '@angular/core'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Hello from app.component.ts'
+  title = 'Make Your Interior More Minimalistic & Modern'
+  subtitle =
+    'Turn your room with panto into a lot more minimalist and modern with ease and speed'
 }
