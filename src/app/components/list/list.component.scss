@@ -1,0 +1,30 @@
+@import '../../../vars.scss';
+
+// /. imports
+
+.list {
+    &__item {
+        &:not(:last-child) {
+            margin: 0 0 1.4rem 0;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        line-height: 1.5rem;
+        color: $dark-color;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin: 0 0.7rem 0 0;
+        }
+    }
+
+    &__text--active {
+        font-family: 'DM Sans';
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #F6973F;
+    }
+}

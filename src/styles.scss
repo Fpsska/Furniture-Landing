@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './vars.scss';
+
+// /. imports
+
 *,
 *::before,
 *::after {
@@ -43,9 +47,14 @@ body {
 body {
     margin: 0;
     padding: 0;
-    background-color: #F7F7F7;
-    font-family: "Roboto", sans-serif;
+    background-color: $primary-color;
+    font-family: 'Gilroy-Medium', sans-serif;
     overflow: hidden;
+}
+
+.main {
+    flex: 1 0 auto;
+    background-color: $white-color;
 }
 
 .container {
@@ -54,10 +63,15 @@ body {
     margin: 0 auto;
 }
 
+.container--footer {
+    max-width: 1240px;
+}
+
 .logo {
     font-size: 2rem;
     line-height: 2.3rem;
     letter-spacing: 0.025rem;
+    font-weight: 700;
     text-transform: capitalize;
     color: #FFF;
 }

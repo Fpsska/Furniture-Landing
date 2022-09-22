@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="container container--footer">
+    <div class="footer__wrapper">
+      <div class="footer__content">
+        <div class="footer__text">
+          <a class="footer__logo logo" href="#">Panto</a>
+          <p class="footer__description">
+            Panto The advantage of hiring a workspace with us is that givees you
+            comfortable service and all-around facilities.
+          </p>
+        </div>
+
+        <app-list *ngFor="let item of listData" [list]="item"></app-list>
+      </div>
+
+      <div class="footer__links links">
+        <a class="links__copyright" href="#">Copyright © 2021</a>
+        <a class="links__terms" href="#">Terms & Conditions</a>
+        <a class="links__policy" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>

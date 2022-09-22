@@ -1,0 +1,62 @@
+@import '../../../vars.scss';
+
+// /. imports
+
+.footer {
+    flex: 0 0 auto;
+    background-color: $primary-color;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 8.7rem 13.4rem 4rem 13.4rem;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 8.4rem 0;
+    }
+
+    &__text {
+        max-width: 21.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        color: $dark-color;
+        margin: 0 0 1rem 0;
+    }
+
+    &__description {
+        margin: 0;
+        font-weight: 500;
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        color: $dark-color;
+        font-size: 500;
+    }
+
+    &__copyright {
+        opacity: .5;
+    }
+
+    &__terms {
+        margin: 0 2.8rem 0 auto;
+    }
+}
