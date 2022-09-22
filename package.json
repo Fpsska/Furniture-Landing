@@ -1,6 +1,7 @@
 {
   "name": "furniture-landing",
   "version": "0.0.0",
+  "author": "Fpsska",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
