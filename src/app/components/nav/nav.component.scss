@@ -1,0 +1,17 @@
+.nav {
+    &__menu {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin: 0 4.4rem 0 0;
+        }
+    }
+
+    &__link {
+        color: #FFF;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
