@@ -1,0 +1,26 @@
+@import '../../../vars.scss';
+@import '../../../mixins.scss';
+
+// /. imports
+
+.button {
+    background-color: transparent;
+    color: $orange-color;
+    font-size: useRem(14);
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 0 useRem(14) 0 0;
+    }
+
+    svg {
+        fill: #E58411;
+        transition: all .2s linear;
+    }
+
+    &:hover svg {
+        fill: $dark-color;
+        transform: translateX(useRem(10));
+    }
+}

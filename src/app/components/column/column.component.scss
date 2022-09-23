@@ -18,16 +18,4 @@
         opacity: .8;
         margin: useRem(20) 0 useRem(14) 0;
     }
-
-    &__button {
-        background-color: transparent;
-        color: $orange-color;
-        font-size: useRem(14);
-        display: flex;
-        align-items: center;
-
-        span {
-            margin: 0 useRem(14) 0 0;
-        }
-    }
 }

@@ -5,7 +5,6 @@
 
 .product {
     min-height: useRem(440);
-    // max-width: useRem(270);
     border-radius: useRem(20);
 
     &__top {
@@ -62,5 +61,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:hover svg {
+            fill: rgb(139, 139, 139);
+            transform: rotate(90deg);
+        }
+
+        svg {
+            fill: $white-color;
+            transition: all .3s linear;
+        }
     }
 }

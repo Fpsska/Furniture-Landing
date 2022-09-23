@@ -285,18 +285,6 @@ body {
     &__selection {
         margin: useRem(32) 0 useRem(68) 0;
     }
-
-    &__button {
-        background-color: transparent;
-        color: $orange-color;
-        font-size: useRem(14);
-        display: flex;
-        align-items: center;
-
-        span {
-            margin: 0 useRem(14) 0 0;
-        }
-    }
 }
 
 .selection {
@@ -314,6 +302,11 @@ body {
         font-size: useRem(18);
         font-weight: 500;
         opacity: .8;
+        transition: all .3s linear;
+
+        &:hover {
+            background-color: rgba($color: $white-color, $alpha: .8);
+        }
 
         &:not(:last-child) {
             margin: 0 useRem(40) 0 0;
