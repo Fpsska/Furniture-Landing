@@ -50,8 +50,9 @@ p {
 }
 
 img {
-    display: inline-block;
     max-width: 100%;
+    display: inline-block;
+    object-fit: cover;
     vertical-align: middle;
 }
 
@@ -99,6 +100,10 @@ body {
     max-width: useRem(1200);
 }
 
+.container--about {
+    max-width: useRem(1440);
+}
+
 .logo {
     font-size: useRem(28);
     line-height: useRem(33);
@@ -118,7 +123,8 @@ body {
 
     position: relative;
 
-    height: 100vh;
+    // height: 100vh;
+    height: useRem(1084);
     min-height: useRem(700);
 
     &__wrapper {
@@ -263,7 +269,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: useRem(138) 0 useRem(55) 0;
+        padding: useRem(138) 0 useRem(50) 0;
     }
 
     &__gallery {
@@ -273,6 +279,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(useRem(268), 1fr));
         justify-content: space-between;
         gap: useRem(42);
+        margin: 0 0 useRem(60) 0;
 
         position: relative;
     }
@@ -371,5 +378,74 @@ body {
             fill: rgba($color: #8D8D8D, $alpha: .5);
             transition: all .3s linear;
         }
+    }
+}
+
+.about {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: useRem(323) 0 useRem(260) 0;
+    }
+
+    &__preview {
+        position: relative;
+        flex: 0 0 33.3%;
+        height: 100px;
+    }
+
+    &__image {
+        max-width: useRem(665);
+    }
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin: 0 0 useRem(270) 0;
+        }
+
+        .about__image {
+            margin: 0 useRem(20) 0 useRem(-10);
+        }
+    }
+
+    &__section--reverse {
+        flex-direction: row-reverse;
+
+        .about__image {
+            margin: 0 useRem(-10) 0 useRem(20);
+        }
+    }
+
+    &__information {
+        max-width: useRem(550);
+    }
+
+    &__title {
+        font-size: useRem(42);
+        line-height: useRem(49);
+        font-weight: 700;
+        color: $dark-color;
+        margin: useRem(20) 0;
+    }
+
+    &__subtitle {
+        font-size: useRem(18);
+        line-height: useRem(21);
+        font-weight: 600;
+        letter-spacing: useRem(5);
+        text-transform: uppercase;
+        color: $orange-color;
+    }
+
+    &__description {
+        font-size: useRem(18);
+        line-height: useRem(22);
+        color: $dark-color;
+        opacity: .8;
+        margin: 0 0 useRem(24) 0;
     }
 }
