@@ -48,6 +48,12 @@ p {
     margin: 0;
 }
 
+img {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
 // ./ nullstyles
 
 
@@ -62,11 +68,11 @@ body {
     padding: 0;
     background-color: $primary-color;
     font-family: 'Gilroy-Medium', sans-serif;
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 
 .main {
-    flex: 1 0 auto;
+    // flex: 1 0 auto;
     background-color: $white-color;
     padding: useRem(92) 0 useRem(234);
 }
@@ -96,27 +102,77 @@ body {
 }
 
 .welcome {
+    background-image: url(./assets/images/section-background.png);
+    // background-image: url(./assets/images/section-background_full.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #222;
+
+    position: relative;
+
+    height: 100vh;
+    min-height: useRem(600);
+
     &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: useRem(92) 0 0 0;
+
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: url(./assets/icons/pointer-icon_medium.svg);
+        }
+
+        &::before {
+            bottom: useRem(-205);
+            right: useRem(-225);
+        }
+
+        &::after {
+            bottom: useRem(-170);
+            left: useRem(530);
+        }
     }
 
     &__title {
         font-size: useRem(80);
         margin: 0 0 useRem(14) 0;
+        color: $white-color;
         text-align: center;
     }
 
     &__subtitle {
+        max-width: useRem(595);
         font-size: useRem(24);
+        font-weight: 300;
         margin: 0 0 useRem(45) 0;
+        color: $white-color;
         opacity: .8;
         text-align: center;
     }
 
+    &::before,
+    &::after {
+        position: absolute;
+    }
 
+    &::before {
+        content: url(./assets/icons/pointer-icon_select.svg);
+        bottom: useRem(275);
+        left: useRem(250);
+    }
+
+    &::after {
+        content: url(./assets/icons/pointer-icon_small.svg);
+        bottom: useRem(230);
+        left: useRem(100);
+    }
 }
 
 .form {
@@ -127,7 +183,7 @@ body {
         width: 100%;
         font-size: useRem(18);
         background: rgba(255, 255, 255, 0.15);
-        border: 1px solid #000;
+        border: 0.861538px solid rgba(255, 255, 255, 0.6);
         border-radius: useRem(42);
         padding: useRem(15) useRem(36) useRem(15) useRem(20);
 
