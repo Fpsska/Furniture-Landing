@@ -21,8 +21,8 @@
             color: #FFF;
             background-color: $orange-color;
             border-radius: useRem(10);
-            top: .2rem;
-            right: .4rem;
+            top: useRem(1);
+            right: useRem(-3);
             width: useRem(18);
             height: useRem(22);
             display: flex;

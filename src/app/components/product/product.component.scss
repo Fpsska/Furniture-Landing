@@ -1,0 +1,66 @@
+@import '../../../vars.scss';
+@import '../../../mixins.scss';
+
+// /. imports
+
+.product {
+    min-height: useRem(440);
+    // max-width: useRem(270);
+    border-radius: useRem(20);
+
+    &__top {
+        margin: 0 0 useRem(35) 0;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__image {
+        width: 100%;
+        height: useRem(255);
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+
+    &__description {
+        background-color: $white-color;
+        border-radius: 0 0 useRem(20) useRem(20);
+        padding: useRem(14) useRem(22) useRem(27) useRem(22);
+    }
+
+    &__name {
+        font-family: 'Inter';
+        font-size: useRem(16);
+        color: #8D8D8D;
+    }
+
+    &__model {
+        margin: useRem(6) 0;
+    }
+
+    &__price {
+        position: relative;
+        font-size: useRem(21);
+        font-weight: 600;
+        margin: 0 useRem(10) 0 0;
+
+        sup {
+            color: #0D1B39;
+            font-size: useRem(15);
+            font-size: 600;
+        }
+    }
+
+    &__button {
+        width: useRem(48);
+        height: useRem(48);
+        background-color: #0D1B39;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

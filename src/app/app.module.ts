@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component'
 import { NavComponent } from './components/nav/nav.component'
 import { ListComponent } from './components/list/list.component'
 import { ColumnComponent } from './components/column/column.component'
+import { ProductComponent } from './components/product/product.component'
 
 // /. imports
 
@@ -19,7 +20,8 @@ import { ColumnComponent } from './components/column/column.component'
     FooterComponent,
     NavComponent,
     ListComponent,
-    ColumnComponent
+    ColumnComponent,
+    ProductComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
