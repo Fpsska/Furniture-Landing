@@ -1,0 +1,33 @@
+@import '../../../vars.scss';
+@import '../../../mixins.scss';
+
+// /. imports
+
+.column {
+
+    &__title {
+        color: $dark-color;
+        font-weight: 700;
+        font-size: useRem(24);
+        line-height: useRem(28);
+    }
+
+    &__subtitle {
+        font-size: useRem(16);
+        line-height: useRem(22);
+        opacity: .8;
+        margin: useRem(20) 0 useRem(14) 0;
+    }
+
+    &__button {
+        background-color: transparent;
+        color: $orange-color;
+        font-size: useRem(14);
+        display: flex;
+        align-items: center;
+
+        span {
+            margin: 0 useRem(14) 0 0;
+        }
+    }
+}

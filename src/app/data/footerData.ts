@@ -1,4 +1,4 @@
-export const listData = [
+export const footerData = [
   {
     id: 1,
     link_1: 'Services',

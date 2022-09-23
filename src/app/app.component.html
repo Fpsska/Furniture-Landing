@@ -36,24 +36,21 @@
     </div>
   </section>
   <main class="main">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-      temporibus consequatur aut consectetur veniam porro, iste labore saepe
-      nobis dicta asperiores et. Quisquam, perferendis! Inventore odio adipisci
-      voluptatem illum minima. Ipsum inventore veniam animi accusantium sint
-      vero quasi ea distinctio, eius voluptas temporibus error sequi minus
-      dolorum? Enim iusto fugiat quo provident, unde possimus similique repellat
-      alias inventore velit corporis. Ad eius fuga soluta. Molestiae voluptatum
-      magnam omnis eius. Illo incidunt, corrupti optio nobis reprehenderit
-      praesentium at libero. Voluptate, nam? Eligendi voluptates nobis corporis
-      architecto neque vel eveniet laborum cumque. Nemo quod optio sequi
-      accusantium facilis sed error ut exercitationem enim sapiente temporibus
-      similique, praesentium corporis magnam molestias repellendus amet veniam.
-      Voluptate qui nulla vitae deleniti veniam quod incidunt vel. Enim vitae
-      perferendis minus commodi illum odio qui nobis quam debitis eveniet
-      aliquam totam recusandae modi dolores magnam, quas cumque earum fuga id
-      ipsa maxime tempore amet adipisci ipsum? Eligendi?
-    </p>
+    <section class="features">
+      <div class="container">
+        <div class="features__wrapper">
+          <h2 class="features__title">
+            Why <br />
+            Choosing Us
+          </h2>
+
+          <app-column
+            *ngFor="let item of featuresDataTemplates"
+            [column]="item"
+          ></app-column>
+        </div>
+      </div>
+    </section>
   </main>
   <app-footer></app-footer>
 </div>

@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { NavComponent } from './components/nav/nav.component'
 import { ListComponent } from './components/list/list.component'
+import { ColumnComponent } from './components/column/column.component'
 
 // /. imports
 
@@ -17,7 +18,8 @@ import { ListComponent } from './components/list/list.component'
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    ListComponent
+    ListComponent,
+    ColumnComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

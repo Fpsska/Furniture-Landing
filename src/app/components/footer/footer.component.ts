@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 
 import { IlistData } from '../list/list.interfaces'
 
-import { listData as data } from '../../data/listData'
+import { footerData } from '../../data/footerData'
 
 // /. imports
 
@@ -12,5 +12,5 @@ import { listData as data } from '../../data/listData'
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  listData: IlistData[] = data
+  footerDataTemplates: IlistData[] = footerData
 }

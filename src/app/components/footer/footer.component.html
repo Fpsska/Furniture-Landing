@@ -10,7 +10,10 @@
           </p>
         </div>
 
-        <app-list *ngFor="let item of listData" [list]="item"></app-list>
+        <app-list
+          *ngFor="let item of footerDataTemplates"
+          [list]="item"
+        ></app-list>
       </div>
 
       <div class="footer__links links">

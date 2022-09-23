@@ -4,13 +4,12 @@
 // /. imports
 
 .footer {
-    // flex: 0 0 auto;
     background-color: $primary-color;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
-        padding: useRem(118) useRem(188) useRem(56) useRem(188);
+        padding: useRem(118) 0 useRem(56) 0;
     }
 
     &__content {

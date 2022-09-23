@@ -1,5 +1,9 @@
 import { Component } from '@angular/core'
 
+import { IfeaturesData } from './components/column/column.interfaces'
+
+import { featuresData } from './data/featuresData'
+
 // /. imports
 
 @Component({
@@ -11,4 +15,5 @@ export class AppComponent {
   title = 'Make Your Interior More Minimalistic & Modern'
   subtitle =
     'Turn your room with panto into a lot more minimalist and modern with ease and speed'
+  featuresDataTemplates: IfeaturesData[] = featuresData
 }

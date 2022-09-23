@@ -17,6 +17,7 @@ a {
 
 button {
     border: none;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -72,9 +73,7 @@ body {
 }
 
 .main {
-    // flex: 1 0 auto;
     background-color: $white-color;
-    padding: useRem(92) 0 useRem(234);
 }
 
 .container {
@@ -112,32 +111,32 @@ body {
     position: relative;
 
     height: 100vh;
-    min-height: useRem(600);
+    min-height: useRem(700);
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: useRem(92) 0 0 0;
+        padding: useRem(92) 0;
 
         position: relative;
 
-        &::before,
-        &::after {
-            position: absolute;
-            content: url(./assets/icons/pointer-icon_medium.svg);
-        }
+        // &::before,
+        // &::after {
+        //     position: absolute;
+        //     content: url(./assets/icons/pointer-icon_medium.svg);
+        // }
 
-        &::before {
-            bottom: useRem(-205);
-            right: useRem(-225);
-        }
+        // &::before {
+        //     bottom: useRem(-205);
+        //     right: useRem(-225);
+        // }
 
-        &::after {
-            bottom: useRem(-170);
-            left: useRem(530);
-        }
+        // &::after {
+        //     bottom: useRem(-170);
+        //     left: useRem(530);
+        // }
     }
 
     &__title {
@@ -157,22 +156,22 @@ body {
         text-align: center;
     }
 
-    &::before,
-    &::after {
-        position: absolute;
-    }
+    // &::before,
+    // &::after {
+    //     position: absolute;
+    // }
 
-    &::before {
-        content: url(./assets/icons/pointer-icon_select.svg);
-        bottom: useRem(275);
-        left: useRem(250);
-    }
+    // &::before {
+    //     content: url(./assets/icons/pointer-icon_select.svg);
+    //     bottom: useRem(275);
+    //     left: useRem(250);
+    // }
 
-    &::after {
-        content: url(./assets/icons/pointer-icon_small.svg);
-        bottom: useRem(230);
-        left: useRem(100);
-    }
+    // &::after {
+    //     content: url(./assets/icons/pointer-icon_small.svg);
+    //     bottom: useRem(230);
+    //     left: useRem(100);
+    // }
 }
 
 .form {
@@ -226,5 +225,24 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.features {
+    padding: useRem(120) 0;
+
+    &__wrapper {
+        display: grid;
+        align-items: center;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(useRem(284), 1fr));
+        gap: useRem(20);
+    }
+
+    &__title {
+        color: $dark-color;
+        font-weight: 700;
+        font-size: useRem(42);
+        line-height: useRem(49);
     }
 }
