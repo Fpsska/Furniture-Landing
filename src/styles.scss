@@ -273,6 +273,8 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(useRem(268), 1fr));
         justify-content: space-between;
         gap: useRem(42);
+
+        position: relative;
     }
 
     &__title {

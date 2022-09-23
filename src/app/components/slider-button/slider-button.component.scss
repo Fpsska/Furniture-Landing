@@ -1,0 +1,34 @@
+@import '../../../vars.scss';
+@import '../../../mixins.scss';
+
+// /. imports
+
+.slider__button {
+    background-color: $white-color;
+    border-radius: useRem(25);
+    box-shadow: 0 useRem(8) useRem(20) rgba(0, 0, 0, 0.06);
+    width: useRem(50);
+    height: useRem(50);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+        fill: #1E1E1E;
+    }
+}
+
+.slider__button.next {
+    right: useRem(-20);
+    transform: translateY(-50%);
+}
+
+.slider__button.prev {
+    left: useRem(-20);
+    transform: rotate(180deg) translateY(-50%);
+}

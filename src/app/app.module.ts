@@ -10,7 +10,8 @@ import { NavComponent } from './components/nav/nav.component'
 import { ListComponent } from './components/list/list.component'
 import { ColumnComponent } from './components/column/column.component'
 import { ProductComponent } from './components/product/product.component'
-import { ButtonComponent } from './components/button/button.component'
+import { ButtonComponent } from './components/button/button.component';
+import { SliderButtonComponent } from './components/slider-button/slider-button.component'
 
 // /. imports
 
@@ -23,7 +24,8 @@ import { ButtonComponent } from './components/button/button.component'
     ListComponent,
     ColumnComponent,
     ProductComponent,
-    ButtonComponent
+    ButtonComponent,
+    SliderButtonComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
