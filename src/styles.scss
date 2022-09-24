@@ -475,11 +475,8 @@ body {
         margin: 0 0 useRem(60) 0;
     }
 
-
     &__gallery {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(3, minmax(min-content, useRem(370)));
-        gap: useRem(40);
+        position: relative;
     }
+
 }

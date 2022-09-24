@@ -3,7 +3,8 @@
 
 // /. imports
 
-.slider__button {
+.swiper-button {
+    transition: all .2s linear;
     background-color: $white-color;
     border-radius: useRem(25);
     box-shadow: 0 useRem(8) useRem(20) rgba(0, 0, 0, 0.06);
@@ -15,20 +16,23 @@
     align-items: center;
 
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    z-index: 1;
+
+    &:hover {
+        background-color: rgba(141, 141, 141, 0.5);
+    }
 
     svg {
         fill: #1E1E1E;
     }
 }
 
-.slider__button.next {
-    right: useRem(-20);
-    transform: translateY(-50%);
+.swiper-button.next {
+    right: useRem(-25);
 }
 
-.slider__button.prev {
-    left: useRem(-20);
-    transform: rotate(180deg) translateY(-50%);
+.swiper-button.prev {
+    left: useRem(-25);
+    transform: rotate(180deg);
 }

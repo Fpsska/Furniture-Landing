@@ -22,7 +22,7 @@ export const testimonialsData = [
   {
     id: 3,
     name: 'Mpok Ina',
-    position: 'Karyawan SwastaKaryawan SwastaKaryawan SwastaKaryawan Swasta',
+    position: 'Karyawan Swasta',
     avatar: 'testimonial-avatar_3.png',
     backgroundIMG: 'testimonial-back_3.png',
     comment: 'Sangat terjangkau untuk kantong saya yang tidak terlalu banyak',

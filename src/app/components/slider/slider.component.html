@@ -1,0 +1,9 @@
+<ng-container>
+  <swiper [config]="config">
+    <ng-template swiperSlide *ngFor="let item of testimonialDataTemplates">
+      <app-testimonial [testimonial]="item"></app-testimonial>
+    </ng-template>
+  </swiper>
+  <app-slider-button role="next"></app-slider-button>
+  <app-slider-button role="prev"></app-slider-button>
+</ng-container>

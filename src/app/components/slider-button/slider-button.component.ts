@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core'
 export class SliderButtonComponent {
   @Input() role: string
 
-  ngOnInit() {
-    console.log(this.role)
-  }
+  // ngOnInit() {
+  //   console.log(this.role)
+  // }
 }
