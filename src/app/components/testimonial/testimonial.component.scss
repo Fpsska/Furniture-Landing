@@ -1,0 +1,102 @@
+@import '../../../vars.scss';
+@import '../../../mixins.scss';
+
+// /. imports
+
+$cardHeight: useRem(476);
+
+.testimonial {
+    position: relative;
+    overflow: hidden;
+    height: $cardHeight;
+    border-radius: useRem(18);
+    display: flex;
+    align-items: flex-end;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white-color;
+        padding: useRem(38) useRem(40) useRem(18) useRem(40);
+        margin: useRem(18);
+        border-radius: useRem(18);
+        height: useRem(205);
+        width: 100%;
+
+        // overflow-y: scroll;
+
+        // scrollbar-width: none;
+        // scrollbar-color: none;
+
+        // &::-webkit-scrollbar {
+        //     width: 0px;
+        // }
+
+        // &::-webkit-scrollbar-track {
+        //     background: none;
+        // }
+
+        // &::-webkit-scrollbar-thumb {
+        //     background-color: none;
+        //     border-radius: 0px;
+        //     border: none;
+        // }
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__avatar-box {
+        position: absolute;
+        top: useRem(-30);
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: useRem(66);
+        height: useRem(66);
+        padding: useRem(8);
+        background-color: $white-color;
+        border-radius: 50%;
+    }
+
+    &__avatar-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    &__name {
+        margin: useRem(12) 0 useRem(6) 0;
+        font-size: useRem(18);
+        line-height: useRem(21);
+        font-weight: 700;
+        color: $dark-color;
+        text-align: center;
+    }
+
+    &__position {
+        font-size: useRem(12);
+        line-height: useRem(14);
+        color: $dark-color;
+        text-align: center;
+    }
+
+    &__comment {
+        text-align: center;
+        opacity: .8;
+        margin: useRem(22) 0;
+        font-size: useRem(14);
+        line-height: useRem(16);
+        color: $dark-color;
+        cursor: pointer;
+        // flex-grow: 1;
+    }
+}

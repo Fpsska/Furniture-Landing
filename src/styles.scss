@@ -62,6 +62,14 @@ fieldset {
     border: none;
 }
 
+blockquote {
+    margin: 0;
+}
+
+address {
+    font-style: normal;
+}
+
 // ./ nullstyles
 
 html,
@@ -75,6 +83,7 @@ body {
     padding: 0;
     background-color: $primary-color;
     font-family: 'Gilroy-Medium', sans-serif;
+    font-weight: 400;
     overflow-x: hidden;
 }
 
@@ -112,6 +121,26 @@ body {
     text-transform: capitalize;
     color: #FFF;
 }
+
+.title {
+    font-size: useRem(42);
+    line-height: useRem(49);
+    font-weight: 700;
+    color: $dark-color;
+    margin: useRem(20) 0;
+}
+
+.subtitle {
+    font-size: useRem(18);
+    line-height: useRem(21);
+    font-weight: 600;
+    letter-spacing: useRem(5);
+    text-transform: uppercase;
+    color: $orange-color;
+}
+
+
+
 
 .welcome {
     background-image: url(./assets/images/section-background.png);
@@ -424,28 +453,33 @@ body {
         max-width: useRem(550);
     }
 
-    &__title {
-        font-size: useRem(42);
-        line-height: useRem(49);
-        font-weight: 700;
-        color: $dark-color;
-        margin: useRem(20) 0;
-    }
-
-    &__subtitle {
-        font-size: useRem(18);
-        line-height: useRem(21);
-        font-weight: 600;
-        letter-spacing: useRem(5);
-        text-transform: uppercase;
-        color: $orange-color;
-    }
-
     &__description {
         font-size: useRem(18);
         line-height: useRem(22);
         color: $dark-color;
         opacity: .8;
         margin: 0 0 useRem(24) 0;
+    }
+}
+
+.testimonials {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 useRem(244);
+    }
+
+    &__text {
+        text-align: center;
+        margin: 0 0 useRem(60) 0;
+    }
+
+
+    &__gallery {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, minmax(min-content, useRem(370)));
+        gap: useRem(40);
     }
 }

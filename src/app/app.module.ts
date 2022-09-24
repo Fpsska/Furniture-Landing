@@ -11,7 +11,8 @@ import { ListComponent } from './components/list/list.component'
 import { ColumnComponent } from './components/column/column.component'
 import { ProductComponent } from './components/product/product.component'
 import { ButtonComponent } from './components/button/button.component';
-import { SliderButtonComponent } from './components/slider-button/slider-button.component'
+import { SliderButtonComponent } from './components/slider-button/slider-button.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component'
 
 // /. imports
 
@@ -25,7 +26,8 @@ import { SliderButtonComponent } from './components/slider-button/slider-button.
     ColumnComponent,
     ProductComponent,
     ButtonComponent,
-    SliderButtonComponent
+    SliderButtonComponent,
+    TestimonialComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
