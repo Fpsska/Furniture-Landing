@@ -24,8 +24,8 @@ export class SliderComponent implements OnInit {
     slidesPerView: 4,
     spaceBetween: 42,
     navigation: {
-      nextEl: '.swiper-button.next',
-      prevEl: '.swiper-button.prev'
+      nextEl: '.swiper-button.next.product',
+      prevEl: '.swiper-button.prev.product'
     },
     loop: true
   }
@@ -33,8 +33,8 @@ export class SliderComponent implements OnInit {
     slidesPerView: 3,
     spaceBetween: 40,
     navigation: {
-      nextEl: '.swiper-button.next',
-      prevEl: '.swiper-button.prev'
+      nextEl: '.swiper-button.next.testimonial',
+      prevEl: '.swiper-button.prev.testimonial'
     },
     loop: true
   }

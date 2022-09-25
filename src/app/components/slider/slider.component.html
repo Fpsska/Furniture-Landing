@@ -13,6 +13,12 @@
     </ng-template>
   </swiper>
   <!-- swiper navigation -->
-  <app-slider-button action="next"></app-slider-button>
-  <app-slider-button action="prev"></app-slider-button>
+  <app-slider-button
+    action="next"
+    [role]="role ? 'product' : 'testimonial'"
+  ></app-slider-button>
+  <app-slider-button
+    action="prev"
+    [role]="role ? 'product' : 'testimonial'"
+  ></app-slider-button>
 </ng-container>
