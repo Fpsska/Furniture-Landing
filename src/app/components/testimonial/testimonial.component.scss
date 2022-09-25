@@ -15,35 +15,20 @@ $cardHeight: useRem(476);
 
     &__wrapper {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
         background-color: $white-color;
         padding: useRem(38) useRem(40) useRem(18) useRem(40);
         margin: useRem(18);
         border-radius: useRem(18);
         height: useRem(205);
-        width: 100%;
+        min-width: 0;
+    }
 
-        // overflow-y: scroll;
-
-        // scrollbar-width: none;
-        // scrollbar-color: none;
-
-        // &::-webkit-scrollbar {
-        //     width: 0px;
-        // }
-
-        // &::-webkit-scrollbar-track {
-        //     background: none;
-        // }
-
-        // &::-webkit-scrollbar-thumb {
-        //     background-color: none;
-        //     border-radius: 0px;
-        //     border: none;
-        // }
+    &__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
     }
 
     &__background {
@@ -80,6 +65,8 @@ $cardHeight: useRem(476);
         font-weight: 700;
         color: $dark-color;
         text-align: center;
+        width: 100%;
+        @include hide-text;
     }
 
     &__position {
@@ -87,16 +74,35 @@ $cardHeight: useRem(476);
         line-height: useRem(14);
         color: $dark-color;
         text-align: center;
+        width: 100%;
+        @include hide-text;
     }
 
     &__comment {
+        cursor: pointer;
         text-align: center;
         opacity: .8;
         margin: useRem(22) 0;
         font-size: useRem(14);
         line-height: useRem(16);
         color: $dark-color;
-        cursor: pointer;
-        // flex-grow: 1;
+        overflow-y: scroll;
+        max-height: 40px;
+
+        scrollbar-width: none;
+        scrollbar-color: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: none;
+            border: none;
+        }
     }
 }

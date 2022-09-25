@@ -27,14 +27,11 @@
         padding: useRem(14) useRem(22) useRem(27) useRem(22);
     }
 
-    &__top {
-        @include hide-text;
-    }
-
     &__name {
         font-family: 'Inter';
         font-size: useRem(16);
         color: #8D8D8D;
+        @include hide-text;
     }
 
     &__model {
