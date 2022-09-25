@@ -22,7 +22,11 @@ button {
 }
 
 input {
-    border: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 ul,
@@ -164,22 +168,6 @@ body {
         padding: useRem(92) 0;
 
         position: relative;
-
-        // &::before,
-        // &::after {
-        //     position: absolute;
-        //     content: url(./assets/icons/pointer-icon_medium.svg);
-        // }
-
-        // &::before {
-        //     bottom: useRem(-205);
-        //     right: useRem(-225);
-        // }
-
-        // &::after {
-        //     bottom: useRem(-170);
-        //     left: useRem(530);
-        // }
     }
 
     &__title {
@@ -198,23 +186,6 @@ body {
         opacity: .8;
         text-align: center;
     }
-
-    // &::before,
-    // &::after {
-    //     position: absolute;
-    // }
-
-    // &::before {
-    //     content: url(./assets/icons/pointer-icon_select.svg);
-    //     bottom: useRem(275);
-    //     left: useRem(250);
-    // }
-
-    // &::after {
-    //     content: url(./assets/icons/pointer-icon_small.svg);
-    //     bottom: useRem(230);
-    //     left: useRem(100);
-    // }
 }
 
 .form {
@@ -225,9 +196,14 @@ body {
         width: 100%;
         font-size: useRem(18);
         background: rgba(255, 255, 255, 0.15);
-        border: 0.861538px solid rgba(255, 255, 255, 0.6);
+        color: $primary-color;
+        border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: useRem(42);
         padding: useRem(15) useRem(36) useRem(15) useRem(20);
+
+        &:focus {
+            border: 1px solid $white-color;
+        }
 
         &::-webkit-input-placeholder {
             font-size: useRem(18);
@@ -268,6 +244,15 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &:hover svg {
+            stroke: $dark-color;
+        }
+
+        svg {
+            transition: all .25s linear;
+            stroke: $white-color;
+        }
     }
 }
 
@@ -291,7 +276,6 @@ body {
 }
 
 .products {
-
     background-color: $primary-color;
 
     &__wrapper {

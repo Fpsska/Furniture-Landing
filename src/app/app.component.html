@@ -25,7 +25,7 @@
             >
               <path
                 d="M15.75 15.75L12.3855 12.3795M14.25 7.875C14.25 9.56576 13.5784 11.1873 12.3828 12.3828C11.1873 13.5784 9.56576 14.25 7.875 14.25C6.18424 14.25 4.56274 13.5784 3.36719 12.3828C2.17165 11.1873 1.5 9.56576 1.5 7.875C1.5 6.18424 2.17165 4.56274 3.36719 3.36719C4.56274 2.17165 6.18424 1.5 7.875 1.5C9.56576 1.5 11.1873 2.17165 12.3828 3.36719C13.5784 4.56274 14.25 6.18424 14.25 7.875Z"
-                stroke="white"
+                stroke=""
                 strokeWidth="2"
                 strokeLinecap="round"
               />
@@ -36,98 +36,7 @@
     </div>
   </section>
   <main class="main">
-    <section class="features">
-      <div class="container">
-        <div class="features__wrapper">
-          <h2 class="features__title">
-            Why <br />
-            Choosing Us
-          </h2>
-
-          <app-column
-            *ngFor="let item of featuresDataTemplates"
-            [column]="item"
-          ></app-column>
-        </div>
-      </div>
-    </section>
-    <section class="products">
-      <div class="container container--products">
-        <div class="products__wrapper">
-          <h2 class="products__title">Best Selling Product</h2>
-          <div class="products__selection selection">
-            <button class="selection__button active">Chair</button>
-            <button class="selection__button">Beds</button>
-            <button class="selection__button">Sofa</button>
-            <button class="selection__button">Lamp</button>
-          </div>
-          <div class="products__gallery">
-            <app-slider
-              role="product"
-              [data]="productDataTemplates"
-            ></app-slider>
-          </div>
-          <app-button title="View All"></app-button>
-        </div>
-      </div>
-    </section>
-    <section class="about">
-      <div class="container container--about">
-        <div class="about__wrapper">
-          <div class="about__section">
-            <img
-              class="about__image"
-              src="../assets/images/design-example.png"
-              alt="design"
-            />
-
-            <div class="about__information">
-              <h3 class="subtitle">Experiences</h3>
-              <h2 class="title">We Provide You The Best Experience</h2>
-              <p class="about__description">
-                You don’t have to worry about the result because all of these
-                interiors are made by people who are professionals in their
-                fields with an elegant and lucurious style and with premium
-                quality materials
-              </p>
-              <app-button title="More Info"></app-button>
-            </div>
-          </div>
-          <div class="about__section about__section--reverse">
-            <img
-              class="about__image"
-              src="../assets/images/materials-example.png"
-              alt="design"
-            />
-
-            <div class="about__information">
-              <h3 class="subtitle">Materials</h3>
-              <h2 class="title">Very Serious Materials For Making Furniture</h2>
-              <p class="about__description">
-                Because panto was very serious about designing furniture for our
-                environment, using a very expensive and famous capital but at a
-                relatively low price
-              </p>
-              <app-button title="More Info"></app-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="testimonials">
-      <div class="container container--products">
-        <div class="testimonials__wrapper">
-          <div class="testimonials__text">
-            <h3 class="subtitle">Testimonials</h3>
-            <h2 class="title">Our Client Reviews</h2>
-          </div>
-
-          <div class="testimonials__gallery">
-            <app-slider [data]="testimonialDataTemplates"></app-slider>
-          </div>
-        </div>
-      </div>
-    </section>
+    <router-outlet></router-outlet>
   </main>
   <app-footer></app-footer>
 </div>

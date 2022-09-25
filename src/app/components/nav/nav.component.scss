@@ -18,4 +18,8 @@
         font-size: useRem(18);
         line-height: useRem(21);
     }
+
+    &__link.active {
+        color: $orange-color;
+    }
 }

@@ -15,6 +15,11 @@ import { ButtonComponent } from './components/button/button.component'
 import { SliderButtonComponent } from './components/slider-button/slider-button.component'
 import { TestimonialComponent } from './components/testimonial/testimonial.component'
 import { SliderComponent } from './components/slider/slider.component'
+import { ShopComponent } from './pages/shop/shop.component'
+import { AboutComponent } from './pages/about/about.component'
+import { ContactComponent } from './pages/contact/contact.component'
+import { FurnitureComponent } from './pages/furniture/furniture.component'
+import { NoFoundComponent } from './pages/no-found/no-found.component'
 
 // /. imports
 
@@ -30,7 +35,12 @@ import { SliderComponent } from './components/slider/slider.component'
     ButtonComponent,
     SliderButtonComponent,
     TestimonialComponent,
-    SliderComponent
+    SliderComponent,
+    ShopComponent,
+    AboutComponent,
+    ContactComponent,
+    FurnitureComponent,
+    NoFoundComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule],
   providers: [],
