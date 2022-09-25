@@ -62,12 +62,10 @@
             <button class="selection__button">Lamp</button>
           </div>
           <div class="products__gallery">
-            <app-product
-              *ngFor="let item of productDataTemplates"
-              [product]="item"
-            ></app-product>
-            <app-slider-button role="next"></app-slider-button>
-            <app-slider-button role="prev"></app-slider-button>
+            <app-slider
+              role="product"
+              [data]="productDataTemplates"
+            ></app-slider>
           </div>
           <app-button title="View All"></app-button>
         </div>
@@ -125,7 +123,7 @@
           </div>
 
           <div class="testimonials__gallery">
-            <app-slider></app-slider>
+            <app-slider [data]="testimonialDataTemplates"></app-slider>
           </div>
         </div>
       </div>

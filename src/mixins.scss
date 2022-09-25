@@ -6,3 +6,9 @@
     $remSize: #{$size / $font-size}rem;
     @return $remSize;
 }
+
+@mixin hide-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

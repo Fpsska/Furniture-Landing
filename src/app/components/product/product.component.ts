@@ -10,5 +10,5 @@ import { Iproducts } from './product.interfaces'
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
-  @Input('product') product: Iproducts
+  @Input() item: Iproducts
 }

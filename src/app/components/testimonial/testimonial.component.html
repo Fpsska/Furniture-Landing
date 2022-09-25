@@ -1,7 +1,7 @@
 <article class="testimonial">
   <img
     class="testimonial__background"
-    src="assets/images/{{ testimonial.backgroundIMG }}"
+    src="assets/images/{{ item.backgroundIMG }}"
     alt="design example"
   />
 
@@ -9,15 +9,15 @@
     <div class="testimonial__avatar-box">
       <img
         class="testimonial__avatar-image"
-        src="assets/images/{{ testimonial.avatar }}"
+        src="assets/images/{{ item.avatar }}"
         alt="user avatar"
       />
     </div>
 
-    <address class="testimonial__name">{{ testimonial.name }}</address>
-    <span class="testimonial__position">{{ testimonial.position }}</span>
+    <address class="testimonial__name">{{ item.name }}</address>
+    <span class="testimonial__position">{{ item.position }}</span>
     <blockquote class="testimonial__comment">
-      <p>{{ testimonial.comment }}</p>
+      <p>{{ item.comment }}</p>
     </blockquote>
     <fieldset class="product__rating rating">
       <legend class="rating__title">select rating</legend>

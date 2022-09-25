@@ -303,13 +303,7 @@ body {
 
     &__gallery {
         width: 100%;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(useRem(268), 1fr));
-        justify-content: space-between;
-        gap: useRem(42);
         margin: 0 0 useRem(60) 0;
-
         position: relative;
     }
 

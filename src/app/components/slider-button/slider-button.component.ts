@@ -8,9 +8,5 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./slider-button.component.scss']
 })
 export class SliderButtonComponent {
-  @Input() role: string
-
-  // ngOnInit() {
-  //   console.log(this.role)
-  // }
+  @Input() action: string
 }

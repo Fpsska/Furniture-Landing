@@ -1,10 +1,10 @@
 <button
   class="swiper-button"
   [ngClass]="{
-    next: role == 'next',
-    prev: role == 'prev'
+    next: action == 'next',
+    prev: action == 'prev'
   }"
-  attr.aria-label="swipe to {{ role }} products"
+  attr.aria-label="swipe to {{ action }} products"
 >
   <svg
     width="21"

@@ -10,5 +10,5 @@ import { Itestimonial } from './testimonial.interfaces'
   styleUrls: ['./testimonial.component.scss']
 })
 export class TestimonialComponent {
-  @Input('testimonial') testimonial: Itestimonial
+  @Input() item: Itestimonial
 }

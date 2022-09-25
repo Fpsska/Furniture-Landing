@@ -1,14 +1,14 @@
 <article class="product">
   <img
     class="product__image"
-    src="assets/images/{{ product.image }}"
+    src="assets/images/{{ item.image }}"
     alt="product"
   />
 
   <div class="product__description">
     <div class="product__top">
-      <span class="product__name">{{ product.name }}</span>
-      <h4 class="product__model">{{ product.model }}</h4>
+      <span class="product__name" [title]="item.name">{{ item.name }}</span>
+      <h4 class="product__model" [title]="item.model">{{ item.model }}</h4>
       <fieldset class="product__rating rating">
         <legend class="rating__title">select rating</legend>
         <input class="rating__input" type="radio" name="rating" id="1" />
@@ -91,7 +91,9 @@
     </div>
 
     <div class="product__bottom">
-      <span class="product__price"><sup>$</sup>{{ product.price }}</span>
+      <span class="product__price" [title]="'$' + item.price">
+        <sup>$</sup>{{ item.price }}
+      </span>
       <button class="product__button" aria-label="add product to basket">
         <svg
           width="21"
