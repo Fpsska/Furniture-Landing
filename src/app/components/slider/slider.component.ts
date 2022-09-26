@@ -18,6 +18,7 @@ export class SliderComponent implements OnChanges {
   // @Input() props: { data: any[]; role?: string }
   @Input() role?: string
   @Input() data: any[]
+  @Input() isCommentsDataLoading: boolean
 
   currentRenderData: any[] = []
   configProductSlider: SwiperOptions = {

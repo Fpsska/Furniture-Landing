@@ -1,4 +1,4 @@
-<article class="testimonial">
+<article class="testimonial" [ngClass]="{ loading: isCommentsDataLoading }">
   <img
     class="testimonial__background"
     [src]="item.backgroundIMG"
@@ -26,7 +26,13 @@
       </blockquote>
       <fieldset class="product__rating rating">
         <legend class="rating__title">select rating</legend>
-        <input class="rating__input" type="radio" name="rating" id="1" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="1"
+          [disabled]="isCommentsDataLoading"
+        />
         <label class="rating__label" for="1">
           <svg
             width="16"
@@ -42,7 +48,13 @@
           </svg>
         </label>
 
-        <input class="rating__input" type="radio" name="rating" id="2" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="2"
+          [disabled]="isCommentsDataLoading"
+        />
         <label class="rating__label" for="2">
           <svg
             width="16"
@@ -57,7 +69,13 @@
             />
           </svg>
         </label>
-        <input class="rating__input" type="radio" name="rating" id="3" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="3"
+          [disabled]="isCommentsDataLoading"
+        />
         <label class="rating__label" for="3">
           <svg
             width="16"
@@ -72,7 +90,13 @@
             />
           </svg>
         </label>
-        <input class="rating__input" type="radio" name="rating" id="4" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="4"
+          [disabled]="isCommentsDataLoading"
+        />
         <label class="rating__label" for="4">
           <svg
             width="16"
@@ -87,7 +111,13 @@
             />
           </svg>
         </label>
-        <input class="rating__input" type="radio" name="rating" id="5" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="5"
+          [disabled]="isCommentsDataLoading"
+        />
         <label class="rating__label" for="5">
           <svg
             width="16"

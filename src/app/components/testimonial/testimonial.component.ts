@@ -11,6 +11,7 @@ import { Icomment } from 'src/app/models/comment'
 })
 export class TestimonialComponent implements OnInit {
   @Input() item: Icomment
+  @Input() isCommentsDataLoading: boolean
 
   ngOnInit(): void {
     console.log('item', this.item)

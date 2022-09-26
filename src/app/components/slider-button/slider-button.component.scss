@@ -26,6 +26,15 @@
     svg {
         fill: #1E1E1E;
     }
+
+    &:disabled {
+        background-color: rgba(141, 141, 141, 0.2);
+        cursor: not-allowed;
+
+        &:hover {
+            background-color: rgba(141, 141, 141, 0.2);
+        }
+    }
 }
 
 .swiper-button.next {

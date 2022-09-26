@@ -326,6 +326,10 @@ body {
         &:checked~.rating__label svg {
             fill: rgba($color: #F6B76F, $alpha: 1);
         }
+
+        &:disabled~.rating__label {
+            pointer-events: none;
+        }
     }
 
     &__label {
@@ -414,4 +418,12 @@ body {
         position: relative;
     }
 
+}
+
+.placeholder-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: useRem(40);
 }

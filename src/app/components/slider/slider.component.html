@@ -8,7 +8,10 @@
         <app-product [item]="item"></app-product>
       </ng-template>
       <ng-template #elseBlock>
-        <app-testimonial [item]="item"></app-testimonial>
+        <app-testimonial
+          [item]="item"
+          [isCommentsDataLoading]="isCommentsDataLoading"
+        ></app-testimonial>
       </ng-template>
     </ng-template>
   </swiper>
@@ -16,9 +19,11 @@
   <app-slider-button
     action="next"
     [role]="role ? 'product' : 'testimonial'"
+    [isCommentsDataLoading]="isCommentsDataLoading"
   ></app-slider-button>
   <app-slider-button
     action="prev"
     [role]="role ? 'product' : 'testimonial'"
+    [isCommentsDataLoading]="isCommentsDataLoading"
   ></app-slider-button>
 </ng-container>

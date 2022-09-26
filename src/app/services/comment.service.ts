@@ -21,6 +21,6 @@ export class CommentService {
           params: new HttpParams({ fromObject: { page: 1, limit: 10 } })
         }
       )
-      .pipe(delay(1000))
+      .pipe(delay(700))
   }
 }

@@ -86,8 +86,26 @@
         </div>
 
         <div class="testimonials__gallery">
-          <!-- < *ngIf="isCommentsDataLoading">COMMENTS DATA IS LOADING...</в> -->
-          <app-slider [data]="commentsData"></app-slider>
+          <div
+            *ngIf="isCommentsDataLoading; then placeholder; else slider"
+          ></div>
+
+          <ng-template #placeholder>
+            <div class="placeholder-gallery">
+              <app-testimonial
+                *ngFor="let comment of mockData"
+                [item]="comment"
+                [isCommentsDataLoading]="isCommentsDataLoading"
+              ></app-testimonial>
+            </div>
+          </ng-template>
+          <ng-template #slider>
+            <app-slider
+              *ngIf="!isCommentsDataLoading"
+              [data]="commentsData"
+              [isCommentsDataLoading]="isCommentsDataLoading"
+            ></app-slider>
+          </ng-template>
         </div>
       </div>
     </div>

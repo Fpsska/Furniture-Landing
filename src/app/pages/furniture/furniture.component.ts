@@ -20,12 +20,16 @@ export class FurnitureComponent implements OnInit {
   featuresDataTemplates: Ifeature[] = featuresData
   productDataTemplates: Iproduct[] = productsData
   commentsData: Icomment[] = []
+  mockData: any[] = [{ id: '' }, { id: '' }, { id: '' }]
+  isCommentsDataLoading: boolean = false
 
   constructor(private commentService: CommentService) {}
 
   ngOnInit(): void {
+    this.isCommentsDataLoading = true
     this.commentService.getComments().subscribe(comments => {
       this.commentsData = comments
+      this.isCommentsDataLoading = false
     })
   }
 }

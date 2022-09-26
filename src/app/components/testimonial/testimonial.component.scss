@@ -3,12 +3,11 @@
 
 // /. imports
 
-$cardHeight: useRem(476);
 
 .testimonial {
     position: relative;
     overflow: hidden;
-    height: $cardHeight;
+    height: useRem(476);
     border-radius: useRem(18);
     display: flex;
     align-items: flex-end;
@@ -105,5 +104,74 @@ $cardHeight: useRem(476);
             background-color: none;
             border: none;
         }
+    }
+}
+
+.testimonial.loading {
+    -webkit-animation: skeleton-loading 1s linear infinite alternate;
+    animation: skeleton-loading 1s linear infinite alternate;
+
+    .testimonial__wrapper {
+        background-color: $primary-color;
+    }
+
+    .testimonial__avatar-image {
+        display: none;
+    }
+
+    .testimonial__avatar-box {
+        background-color: $primary-color;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $white-color;
+            width: useRem(45);
+            height: useRem(45);
+            border-radius: 50%;
+        }
+    }
+
+    .testimonial__background {
+        display: none;
+    }
+
+    .testimonial__position {
+        height: useRem(15);
+        background-color: $white-color;
+    }
+
+    .testimonial__name {
+        height: useRem(15);
+        background-color: $white-color;
+    }
+
+    .testimonial__comment {
+        height: useRem(40);
+        width: 100%;
+        background-color: $white-color;
+    }
+}
+
+@-webkit-keyframes skeleton-loading {
+    0% {
+        background-color: hsla(0, 0%, 91%, 0.712);
+    }
+
+    100% {
+        background-color: hsla(204, 20%, 95%, 0.342);
+    }
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsla(0, 13%, 88%, 0.712);
+    }
+
+    100% {
+        background-color: hsla(200, 2%, 62%, 0.342);
     }
 }
