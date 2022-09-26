@@ -1,1 +1,21 @@
-<p>no-found works!</p>
+<ng-container>
+  <div class="error">
+    <div class="container container--welcome">
+      <div class="error__wrapper">
+        <img
+          class="error__image"
+          src="../../../assets/images/not-exist.png"
+          alt="not exist"
+        />
+        <h2 class="error__title">Oops! Page not found</h2>
+        <p class="error__message">
+          <span
+            >We are sorry but the page you're looking for doesn't exist. You
+            could return
+          </span>
+          <a class="error___link" [routerLink]="''">to the homepage</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</ng-container>
