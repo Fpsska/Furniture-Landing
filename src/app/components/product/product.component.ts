@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 
-import { Iproducts } from './product.interfaces'
+import { Iproduct } from '../../models/product'
 
 // /. imports
 
@@ -10,5 +10,5 @@ import { Iproducts } from './product.interfaces'
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
-  @Input() item: Iproducts
+  @Input() item: Iproduct
 }

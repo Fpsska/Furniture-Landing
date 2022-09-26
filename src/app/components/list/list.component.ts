@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 
-import { IlistData } from './list.interfaces'
+import { Ilist } from 'src/app/models/list'
 
 // /. imports
 
@@ -10,5 +10,5 @@ import { IlistData } from './list.interfaces'
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  @Input('list') list: IlistData
+  @Input('list') list: Ilist
 }

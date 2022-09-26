@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 
-import { Itestimonial } from './testimonial.interfaces'
+import { Itestimonial } from 'src/app/models/testimonial'
 
 // /. imports
 

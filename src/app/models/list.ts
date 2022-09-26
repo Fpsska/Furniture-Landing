@@ -1,4 +1,4 @@
-export interface IlistData {
+export interface Ilist {
   id: number
   link_1: string
   link_2: string

@@ -1,4 +1,4 @@
-export interface IfeaturesData {
+export interface Ifeature {
   id: number
   title: string
   subtitle: string

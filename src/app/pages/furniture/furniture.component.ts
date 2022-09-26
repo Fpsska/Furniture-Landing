@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 
-import { IfeaturesData } from '../../components/column/column.interfaces'
-import { Iproducts } from '../../components/product/product.interfaces'
-import { Itestimonial } from '../../components/testimonial/testimonial.interfaces'
+import { Ifeature } from 'src/app/models/feature'
+import { Iproduct } from 'src/app/models/product'
+import { Itestimonial } from 'src/app/models/testimonial'
 
 import { featuresData } from '../../data/featuresData'
 import { productsData } from '../../data/productsData'
@@ -16,8 +16,8 @@ import { testimonialsData } from '../../data/testimonialsData'
   styleUrls: ['./furniture.component.scss']
 })
 export class FurnitureComponent implements OnInit {
-  featuresDataTemplates: IfeaturesData[] = featuresData
-  productDataTemplates: Iproducts[] = productsData
+  featuresDataTemplates: Ifeature[] = featuresData
+  productDataTemplates: Iproduct[] = productsData
   testimonialDataTemplates: Itestimonial[] = testimonialsData
   constructor() {}
 

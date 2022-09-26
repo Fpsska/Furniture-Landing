@@ -7,8 +7,4 @@ import { Component } from '@angular/core'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Make Your Interior More Minimalistic & Modern'
-  subtitle =
-    'Turn your room with panto into a lot more minimalist and modern with ease and speed'
-}
+export class AppComponent {}

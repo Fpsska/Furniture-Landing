@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 
-import { IfeaturesData } from './column.interfaces'
+import { Ifeature } from 'src/app/models/feature'
 
 // /. imports
 
@@ -10,5 +10,5 @@ import { IfeaturesData } from './column.interfaces'
   styleUrls: ['./column.component.scss']
 })
 export class ColumnComponent {
-  @Input('column') column: IfeaturesData
+  @Input('column') column: Ifeature
 }
