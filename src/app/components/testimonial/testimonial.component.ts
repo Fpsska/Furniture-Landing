@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 
-import { Itestimonial } from 'src/app/models/testimonial'
+import { Icomment } from 'src/app/models/comment'
 
 // /. imports
 
@@ -9,6 +9,10 @@ import { Itestimonial } from 'src/app/models/testimonial'
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.scss']
 })
-export class TestimonialComponent {
-  @Input() item: Itestimonial
+export class TestimonialComponent implements OnInit {
+  @Input() item: Icomment
+
+  ngOnInit(): void {
+    console.log('item', this.item)
+  }
 }

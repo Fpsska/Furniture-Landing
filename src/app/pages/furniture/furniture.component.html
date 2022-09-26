@@ -86,7 +86,8 @@
         </div>
 
         <div class="testimonials__gallery">
-          <app-slider [data]="testimonialDataTemplates"></app-slider>
+          <!-- < *ngIf="isCommentsDataLoading">COMMENTS DATA IS LOADING...</в> -->
+          <app-slider [data]="commentsData"></app-slider>
         </div>
       </div>
     </div>

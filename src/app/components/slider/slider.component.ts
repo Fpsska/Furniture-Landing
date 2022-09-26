@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core'
+import { Component, Input, OnChanges, ViewEncapsulation } from '@angular/core'
 
 // import Swiper core and required modules
 import SwiperCore, { SwiperOptions, Navigation } from 'swiper'
@@ -14,7 +14,7 @@ SwiperCore.use([Navigation])
   styleUrls: ['./slider.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnChanges {
   // @Input() props: { data: any[]; role?: string }
   @Input() role?: string
   @Input() data: any[]
@@ -39,8 +39,7 @@ export class SliderComponent implements OnInit {
     loop: true
   }
 
-  ngOnInit(): void {
-    console.log(this.data)
+  ngOnChanges(): void {
     this.currentRenderData = this.data
   }
 }

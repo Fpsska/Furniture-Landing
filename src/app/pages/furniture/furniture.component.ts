@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core'
 
 import { Ifeature } from 'src/app/models/feature'
 import { Iproduct } from 'src/app/models/product'
-import { Itestimonial } from 'src/app/models/testimonial'
+import { Icomment } from 'src/app/models/comment'
 
 import { featuresData } from '../../data/featuresData'
 import { productsData } from '../../data/productsData'
-import { testimonialsData } from '../../data/testimonialsData'
+
+import { CommentService } from 'src/app/services/comment.service'
 
 // /. imports
 
@@ -18,8 +19,13 @@ import { testimonialsData } from '../../data/testimonialsData'
 export class FurnitureComponent implements OnInit {
   featuresDataTemplates: Ifeature[] = featuresData
   productDataTemplates: Iproduct[] = productsData
-  testimonialDataTemplates: Itestimonial[] = testimonialsData
-  constructor() {}
+  commentsData: Icomment[] = []
 
-  ngOnInit(): void {}
+  constructor(private commentService: CommentService) {}
+
+  ngOnInit(): void {
+    this.commentService.getComments().subscribe(comments => {
+      this.commentsData = comments
+    })
+  }
 }

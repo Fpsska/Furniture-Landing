@@ -1,9 +1,9 @@
-export interface Itestimonial {
+export interface Icomment {
   id: number
   name: string
   position: string
   avatar: string
   backgroundIMG: string
-  comment: string
+  message: string
   rating: number
 }
