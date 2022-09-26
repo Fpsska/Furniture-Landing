@@ -4,6 +4,14 @@
 // /. imports
 
 .header {
+
+    // background-color: rgba($color: $dark-color, $alpha: .9);
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+
     &__wrapper {
         display: flex;
         justify-content: space-between;

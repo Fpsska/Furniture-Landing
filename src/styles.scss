@@ -79,8 +79,9 @@ address {
 html,
 body {
     font-size: #{$font-size}px;
-    height: 100%;
+    min-height: 100%;
 }
+
 
 body {
     margin: 0;
@@ -143,50 +144,6 @@ body {
     color: $orange-color;
 }
 
-
-
-
-.welcome {
-    background-image: url(./assets/images/section-background.png);
-    // background-image: url(./assets/images/section-background_full.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #222;
-
-    position: relative;
-
-    // height: 100vh;
-    height: useRem(1084);
-    min-height: useRem(700);
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: useRem(92) 0;
-
-        position: relative;
-    }
-
-    &__title {
-        font-size: useRem(80);
-        margin: 0 0 useRem(14) 0;
-        color: $white-color;
-        text-align: center;
-    }
-
-    &__subtitle {
-        max-width: useRem(595);
-        font-size: useRem(24);
-        font-weight: 300;
-        margin: 0 0 useRem(45) 0;
-        color: $white-color;
-        opacity: .8;
-        text-align: center;
-    }
-}
 
 .form-search {
     position: relative;

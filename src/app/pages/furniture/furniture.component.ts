@@ -16,9 +16,6 @@ import { testimonialsData } from '../../data/testimonialsData'
   styleUrls: ['./furniture.component.scss']
 })
 export class FurnitureComponent implements OnInit {
-  title = 'Make Your Interior More Minimalistic & Modern'
-  subtitle =
-    'Turn your room with panto into a lot more minimalist and modern with ease and speed'
   featuresDataTemplates: IfeaturesData[] = featuresData
   productDataTemplates: Iproducts[] = productsData
   testimonialDataTemplates: Itestimonial[] = testimonialsData
