@@ -19,8 +19,10 @@ import { ShopComponent } from './pages/shop/shop.component'
 import { AboutComponent } from './pages/about/about.component'
 import { ContactComponent } from './pages/contact/contact.component'
 import { FurnitureComponent } from './pages/furniture/furniture.component'
-import { NoFoundComponent } from './pages/no-found/no-found.component';
+import { NoFoundComponent } from './pages/no-found/no-found.component'
 import { PlaceholderSectionComponent } from './components/placeholder-section/placeholder-section.component'
+import { FormSearchComponent } from './components/form-search/form-search.component'
+import { ButtonScrollComponent } from './components/button-scroll/button-scroll.component'
 
 // /. imports
 
@@ -42,7 +44,9 @@ import { PlaceholderSectionComponent } from './components/placeholder-section/pl
     ContactComponent,
     FurnitureComponent,
     NoFoundComponent,
-    PlaceholderSectionComponent
+    PlaceholderSectionComponent,
+    FormSearchComponent,
+    ButtonScrollComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule],
   providers: [],
