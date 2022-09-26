@@ -1,0 +1,38 @@
+<section class="placeholder">
+  <div class="container container--welcome">
+    <div class="placeholder__wrapper">
+      <h2 class="placeholder__title">
+        {{ pageName }} page is under construction
+      </h2>
+
+      <img
+        src="../../../assets/images/under-construction.png"
+        alt="coming soon"
+        class="placeholder__image"
+      />
+
+      <p class="placeholder__message">
+        Our website is under reconstruction, but we are ready to communicate!
+      </p>
+
+      <form class="placeholder__form form-feedback">
+        <div class="form-feedback__wrapper">
+          <input
+            class="form-feedback__input"
+            placeholder="Enter a valid email adress"
+            type="email"
+            id="notice"
+          />
+          <button class="form-feedback__button" type="submit">notify me</button>
+        </div>
+
+        <label class="form-feedback__label" for="notice">
+          <span>Get notification of our lauch date!</span>
+          <a class="form-feedback__link" [routerLink]="''">
+            or redirect to homepage
+          </a>
+        </label>
+      </form>
+    </div>
+  </div>
+</section>

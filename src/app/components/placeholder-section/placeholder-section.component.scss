@@ -1,0 +1,116 @@
+@import '../../../mixins.scss';
+@import '../../../vars.scss';
+
+// /. imports
+
+.placeholder {
+
+    &__wrapper {
+        padding: 15vh 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image {
+        width: useRem(300);
+        height: useRem(300);
+        margin: useRem(80) 0 useRem(50) 0;
+    }
+
+    &__title {
+        font-size: useRem(42);
+        text-transform: uppercase;
+    }
+
+    &__message {
+        font-size: useRem(18);
+        font-style: italic;
+        margin: 0 0 useRem(26) 0;
+    }
+}
+
+.form-feedback {
+    width: 100%;
+    max-width: useRem(500);
+
+    &__wrapper {
+        display: flex;
+        margin: 0 0 useRem(10) 0;
+    }
+
+    &__input {
+        flex: 0 0 70%;
+        padding: useRem(10) useRem(65) useRem(10) useRem(10);
+        font-size: useRem(16);
+
+        &:focus {
+            &::placeholder {
+                color: $orange-color;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            font-size: useRem(14);
+        }
+
+        &::-moz-placeholder {
+            font-size: useRem(14);
+        }
+
+        &:-ms-input-placeholder {
+            font-size: useRem(14);
+        }
+
+        &::-ms-input-placeholder {
+            font-size: useRem(14);
+        }
+
+        &::placeholder {
+            font-size: useRem(14);
+        }
+    }
+
+    &__label {
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        font-size: useRem(16);
+        color: $dark-color;
+
+        * {
+            transition: all .3s linear;
+        }
+
+        span {
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__link {
+        font-style: italic;
+
+        &:hover {
+            color: rgba($color: blue, $alpha: .6)
+        }
+    }
+
+    &__button {
+        flex: 0 0 30%;
+        text-transform: uppercase;
+        background-color: $dark-color;
+        color: $white-color;
+        padding: useRem(10) useRem(5);
+        transition: all .3s linear;
+
+        &:hover {
+            background-color: rgba(141, 141, 141, 0.5);
+            color: $dark-color;
+        }
+    }
+}

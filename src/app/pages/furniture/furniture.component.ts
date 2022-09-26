@@ -8,6 +8,8 @@ import { featuresData } from '../../data/featuresData'
 import { productsData } from '../../data/productsData'
 import { testimonialsData } from '../../data/testimonialsData'
 
+// /. imports
+
 @Component({
   selector: 'app-furniture',
   templateUrl: './furniture.component.html',
