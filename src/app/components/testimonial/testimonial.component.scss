@@ -108,8 +108,12 @@
 }
 
 .testimonial.loading {
-    -webkit-animation: skeleton-loading 1s linear infinite alternate;
-    animation: skeleton-loading 1s linear infinite alternate;
+    background-color: #DDDBDD;
+    position: relative;
+
+    &::after {
+        @include skeleton-animation;
+    }
 
     .testimonial__wrapper {
         background-color: $primary-color;
@@ -153,25 +157,5 @@
         height: useRem(40);
         width: 100%;
         background-color: $white-color;
-    }
-}
-
-@-webkit-keyframes skeleton-loading {
-    0% {
-        background-color: hsla(0, 0%, 91%, 0.712);
-    }
-
-    100% {
-        background-color: hsla(204, 20%, 95%, 0.342);
-    }
-}
-
-@keyframes skeleton-loading {
-    0% {
-        background-color: hsla(0, 13%, 88%, 0.712);
-    }
-
-    100% {
-        background-color: hsla(200, 2%, 62%, 0.342);
     }
 }

@@ -28,7 +28,30 @@
           <button class="selection__button">Lamp</button>
         </div>
         <div class="products__gallery">
-          <app-slider role="product" [data]="productsData"></app-slider>
+          <div
+            *ngIf="
+              isProductsDataLoading;
+              then productsPlaceholder;
+              else productsSlider
+            "
+          ></div>
+
+          <ng-template #productsPlaceholder>
+            <div class="placeholder-gallery placeholder-gallery--products">
+              <app-product
+                *ngFor="let comment of productsMockData"
+                [item]="comment"
+                [isProductsDataLoading]="isProductsDataLoading"
+              ></app-product>
+            </div>
+          </ng-template>
+          <ng-template #productsSlider>
+            <app-slider
+              role="product"
+              [data]="productsData"
+              [isProductsDataLoading]="isProductsDataLoading"
+            ></app-slider>
+          </ng-template>
         </div>
         <app-button title="View All"></app-button>
       </div>
@@ -93,7 +116,7 @@
           <ng-template #placeholder>
             <div class="placeholder-gallery">
               <app-testimonial
-                *ngFor="let comment of mockData"
+                *ngFor="let comment of commentsMockData"
                 [item]="comment"
                 [isCommentsDataLoading]="isCommentsDataLoading"
               ></app-testimonial>

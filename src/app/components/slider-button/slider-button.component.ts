@@ -11,4 +11,5 @@ export class SliderButtonComponent {
   @Input() action: string
   @Input() role: string
   @Input() isCommentsDataLoading: boolean
+  @Input() isProductsDataLoading: boolean
 }

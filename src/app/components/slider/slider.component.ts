@@ -15,10 +15,10 @@ SwiperCore.use([Navigation])
   encapsulation: ViewEncapsulation.None
 })
 export class SliderComponent implements OnChanges {
-  // @Input() props: { data: any[]; role?: string }
   @Input() role?: string
   @Input() data: any[]
   @Input() isCommentsDataLoading: boolean
+  @Input() isProductsDataLoading: boolean
 
   currentRenderData: any[] = []
   configProductSlider: SwiperOptions = {

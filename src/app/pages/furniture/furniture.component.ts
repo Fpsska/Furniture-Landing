@@ -21,8 +21,10 @@ export class FurnitureComponent implements OnInit {
   featuresDataTemplates: Ifeature[] = featuresData
   commentsData: Icomment[] = []
   productsData: Iproduct[] = []
-  mockData: any[] = [{ id: '' }, { id: '' }, { id: '' }]
+  productsMockData: any[] = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
+  commentsMockData: any[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
   isCommentsDataLoading: boolean = false
+  isProductsDataLoading: boolean = false
 
   constructor(
     private commentService: CommentService,
@@ -37,8 +39,10 @@ export class FurnitureComponent implements OnInit {
       this.isCommentsDataLoading = false
     })
     // handle productsData stream
+    this.isProductsDataLoading = true
     this.productService.getProducts().subscribe(products => {
       this.productsData = products
+      this.isProductsDataLoading = false
     })
   }
 }

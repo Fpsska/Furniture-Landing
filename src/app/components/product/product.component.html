@@ -1,4 +1,4 @@
-<article class="product">
+<article class="product" [ngClass]="{ loading: isProductsDataLoading }">
   <img
     class="product__image"
     [src]="item.image"
@@ -12,7 +12,13 @@
       <h4 class="product__model" [title]="item.model">{{ item.model }}</h4>
       <fieldset class="product__rating rating">
         <legend class="rating__title">select rating</legend>
-        <input class="rating__input" type="radio" name="rating" id="1" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="1"
+          [disabled]="isProductsDataLoading"
+        />
         <label class="rating__label" for="1">
           <svg
             width="16"
@@ -28,7 +34,13 @@
           </svg>
         </label>
 
-        <input class="rating__input" type="radio" name="rating" id="2" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="2"
+          [disabled]="isProductsDataLoading"
+        />
         <label class="rating__label" for="2">
           <svg
             width="16"
@@ -43,7 +55,13 @@
             />
           </svg>
         </label>
-        <input class="rating__input" type="radio" name="rating" id="3" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="3"
+          [disabled]="isProductsDataLoading"
+        />
         <label class="rating__label" for="3">
           <svg
             width="16"
@@ -58,7 +76,13 @@
             />
           </svg>
         </label>
-        <input class="rating__input" type="radio" name="rating" id="4" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="4"
+          [disabled]="isProductsDataLoading"
+        />
         <label class="rating__label" for="4">
           <svg
             width="16"
@@ -73,7 +97,13 @@
             />
           </svg>
         </label>
-        <input class="rating__input" type="radio" name="rating" id="5" />
+        <input
+          class="rating__input"
+          type="radio"
+          name="rating"
+          id="5"
+          [disabled]="isProductsDataLoading"
+        />
         <label class="rating__label" for="5">
           <svg
             width="16"
@@ -95,7 +125,11 @@
       <span class="product__price" [title]="'$' + item.price">
         <sup>$</sup>{{ item.price }}
       </span>
-      <button class="product__button" aria-label="add product to basket">
+      <button
+        class="product__button"
+        aria-label="add product to basket"
+        [disabled]="isProductsDataLoading"
+      >
         <svg
           width="21"
           height="20"

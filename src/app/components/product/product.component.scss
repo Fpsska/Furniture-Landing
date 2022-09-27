@@ -63,6 +63,16 @@
         justify-content: center;
         flex-shrink: 0;
 
+        &:disabled {
+            opacity: 0.3;
+            transform: rotate(0deg);
+
+            &:hover svg {
+                fill: $white-color;
+                transform: none;
+            }
+        }
+
         &:hover svg {
             fill: rgb(139, 139, 139);
             transform: rotate(90deg);
@@ -71,6 +81,39 @@
         svg {
             fill: $white-color;
             transition: all .3s linear;
+        }
+    }
+}
+
+.product.loading {
+    position: relative;
+
+    &::after {
+        @include skeleton-animation;
+    }
+
+    .product__image {
+        background-color: $primary-color;
+    }
+
+    .product__name {
+        background-color: #EEEE;
+        height: useRem(15);
+    }
+
+    .product__model {
+        background-color: #EEEE;
+        height: useRem(15);
+        margin: useRem(10) 0;
+    }
+
+    .product__price {
+        background-color: #EEEE;
+        height: useRem(20);
+        width: useRem(50);
+
+        sup {
+            display: none;
         }
     }
 }
