@@ -1,7 +1,8 @@
 <article class="product">
   <img
     class="product__image"
-    src="assets/images/{{ item.image }}"
+    [src]="item.image"
+    (error)="handleImageError($event)"
     alt="product"
   />
 

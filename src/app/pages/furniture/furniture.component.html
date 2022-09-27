@@ -28,7 +28,7 @@
           <button class="selection__button">Lamp</button>
         </div>
         <div class="products__gallery">
-          <app-slider role="product" [data]="productDataTemplates"></app-slider>
+          <app-slider role="product" [data]="productsData"></app-slider>
         </div>
         <app-button title="View All"></app-button>
       </div>
@@ -101,7 +101,6 @@
           </ng-template>
           <ng-template #slider>
             <app-slider
-              *ngIf="!isCommentsDataLoading"
               [data]="commentsData"
               [isCommentsDataLoading]="isCommentsDataLoading"
             ></app-slider>

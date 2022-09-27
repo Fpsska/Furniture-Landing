@@ -11,4 +11,8 @@ import { Iproduct } from '../../models/product'
 })
 export class ProductComponent {
   @Input() item: Iproduct
+
+  public handleImageError(event: any) {
+    event.target.src = 'https://via.placeholder.com/260x280'
+  }
 }

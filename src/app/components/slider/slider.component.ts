@@ -42,5 +42,6 @@ export class SliderComponent implements OnChanges {
 
   ngOnChanges(): void {
     this.currentRenderData = this.data
+    // console.log(this.data)
   }
 }
