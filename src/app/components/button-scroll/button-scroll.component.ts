@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core'
+
+import { ViewportScroller } from '@angular/common'
+
+// /. imports
 
 @Component({
   selector: 'app-button-scroll',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button-scroll.component.scss']
 })
 export class ButtonScrollComponent implements OnInit {
+  @Input() anchorID: string
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller) {}
 
   ngOnInit(): void {
+    // console.log(this.anchorID)
   }
 
+  scrollToElement() {
+    this.scroller.scrollToAnchor(this.anchorID)
+    console.log('clicked!')
+  }
 }

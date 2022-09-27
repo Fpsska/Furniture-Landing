@@ -80,6 +80,7 @@ html,
 body {
     font-size: #{$font-size}px;
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 

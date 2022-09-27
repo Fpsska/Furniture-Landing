@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core'
 
+// /. imports
+
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
