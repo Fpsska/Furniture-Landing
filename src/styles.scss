@@ -292,63 +292,6 @@ body {
 
 }
 
-.rating {
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-
-    &__title {
-        width: 1px;
-        height: 1px;
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-        position: absolute;
-    }
-
-    &__input {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: 0;
-        cursor: pointer;
-
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-
-        &:hover~.rating__label svg {
-            fill: rgba($color: #F6B76F, $alpha: 1);
-        }
-
-        &:checked~.rating__label svg {
-            fill: rgba($color: #F6B76F, $alpha: 1);
-        }
-
-        &:disabled~.rating__label {
-            pointer-events: none;
-        }
-    }
-
-    &__label {
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:not(:last-child) {
-            margin: 0 0 0 useRem(5);
-        }
-
-        svg {
-            fill: rgba($color: #8D8D8D, $alpha: .5);
-            transition: all .3s linear;
-        }
-    }
-}
-
 .about {
     &__wrapper {
         display: flex;
