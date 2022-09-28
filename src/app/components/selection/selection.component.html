@@ -3,7 +3,7 @@
     *ngFor="let button of selectButtonsDataTemplates"
     class="selection__button"
     [ngClass]="{ active: button.isActive }"
-    (click)="updateFilterOption(button.reference)"
+    (click)="handleButtonClick(button.id, button.reference)"
   >
     {{ button.text }}
   </button>

@@ -76,7 +76,6 @@ export class FurnitureComponent implements OnInit {
 
   updateFilterOption(reference: any): void {
     this.filterOption = reference
-    console.log(reference)
   }
 
   changeFilterOption(refElement: any): void {
