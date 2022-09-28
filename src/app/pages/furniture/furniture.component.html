@@ -22,10 +22,34 @@
       <div class="products__wrapper">
         <h2 class="products__title">Best Selling Product</h2>
         <div class="products__selection selection">
-          <button class="selection__button active">Chair</button>
-          <button class="selection__button">Beds</button>
-          <button class="selection__button">Sofa</button>
-          <button class="selection__button">Lamp</button>
+          <button
+            #chair
+            class="selection__button active"
+            (click)="filterProducts(chair)"
+          >
+            Chair
+          </button>
+          <button
+            class="selection__button"
+            #beds
+            (click)="filterProducts(beds)"
+          >
+            Beds
+          </button>
+          <button
+            #sofa
+            class="selection__button"
+            (click)="filterProducts(sofa)"
+          >
+            Sofa
+          </button>
+          <button
+            #lamp
+            class="selection__button"
+            (click)="filterProducts(lamp)"
+          >
+            Lamp
+          </button>
         </div>
         <div class="products__gallery">
           <div
@@ -39,18 +63,23 @@
           <ng-template #productsPlaceholder>
             <div class="placeholder-gallery placeholder-gallery--products">
               <app-product
-                *ngFor="let comment of productsMockData"
-                [item]="comment"
+                *ngFor="let product of productsMockData"
+                [item]="product"
                 [isProductsDataLoading]="isProductsDataLoading"
               ></app-product>
             </div>
           </ng-template>
           <ng-template #productsSlider>
-            <app-slider
-              role="product"
-              [data]="productsData"
-              [isProductsDataLoading]="isProductsDataLoading"
-            ></app-slider>
+            <swiper [config]="configProductSlider">
+              <ng-template
+                swiperSlide
+                *ngFor="
+                  let product of productsData | filterProducts: filterOption
+                "
+              >
+                <app-product [item]="product"></app-product>
+              </ng-template>
+            </swiper>
           </ng-template>
         </div>
         <app-button title="View All"></app-button>
@@ -110,10 +139,14 @@
 
         <div class="testimonials__gallery">
           <div
-            *ngIf="isCommentsDataLoading; then placeholder; else slider"
+            *ngIf="
+              isCommentsDataLoading;
+              then testimonialsPlaceholder;
+              else testimonialsSlider
+            "
           ></div>
 
-          <ng-template #placeholder>
+          <ng-template #testimonialsPlaceholder>
             <div class="placeholder-gallery">
               <app-testimonial
                 *ngFor="let comment of commentsMockData"
@@ -122,11 +155,12 @@
               ></app-testimonial>
             </div>
           </ng-template>
-          <ng-template #slider>
-            <app-slider
-              [data]="commentsData"
-              [isCommentsDataLoading]="isCommentsDataLoading"
-            ></app-slider>
+          <ng-template #testimonialsSlider>
+            <swiper [config]="configTestimonialSlider">
+              <ng-template swiperSlide *ngFor="let item of commentsData">
+                <app-testimonial [item]="item"></app-testimonial>
+              </ng-template>
+            </swiper>
           </ng-template>
         </div>
       </div>

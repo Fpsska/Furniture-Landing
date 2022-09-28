@@ -24,8 +24,9 @@ import { NoFoundComponent } from './pages/no-found/no-found.component'
 import { PlaceholderSectionComponent } from './components/placeholder-section/placeholder-section.component'
 import { FormSearchComponent } from './components/form-search/form-search.component'
 import { ButtonScrollComponent } from './components/button-scroll/button-scroll.component'
-import { StartSectionComponent } from './components/start-section/start-section.component';
-import { RatingComponent } from './components/rating/rating.component'
+import { StartSectionComponent } from './components/start-section/start-section.component'
+import { RatingComponent } from './components/rating/rating.component';
+import { FilterProductsPipe } from './pipes/filter-products.pipe'
 
 // /. imports
 
@@ -51,7 +52,8 @@ import { RatingComponent } from './components/rating/rating.component'
     FormSearchComponent,
     ButtonScrollComponent,
     StartSectionComponent,
-    RatingComponent
+    RatingComponent,
+    FilterProductsPipe
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],
