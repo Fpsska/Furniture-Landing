@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, HostListener } from '@angular/core'
 
-import { Icomment } from './models/comment'
-
-import { CommentService } from './services/comment.service'
+import { ScrollService } from './services/scroll.service'
 
 // /. imports
 
@@ -12,14 +10,21 @@ import { CommentService } from './services/comment.service'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  // commentsData: Icomment[] = []
+  isHeaderStylized: boolean = false
 
-  constructor(private commentService: CommentService) {}
+  constructor(private scrollService: ScrollService) {}
 
-  ngOnInit(): void {
-    // this.commentsService.getComments().subscribe((comments) => {
-    //   console.log(comments)
-    //   this.commentsData = comments
-    // })
+  ngOnInit(): void {}
+
+  @HostListener('window:scroll') // + automatic unsubscribe of eventListener when component was deleted
+  handleStickyHeader() {
+    if (
+      window.scrollY + this.scrollService.headerHeight >
+      this.scrollService.welcomeSectionHeigth
+    ) {
+      this.isHeaderStylized = true
+    } else {
+      this.isHeaderStylized = false
+    }
   }
 }

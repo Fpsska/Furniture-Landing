@@ -1,4 +1,12 @@
-import { Component } from '@angular/core'
+import {
+  Component,
+  Input,
+  AfterViewInit,
+  ViewChild,
+  ElementRef
+} from '@angular/core'
+
+import { ScrollService } from 'src/app/services/scroll.service'
 
 // /. imports
 
@@ -7,4 +15,16 @@ import { Component } from '@angular/core'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {}
+export class HeaderComponent implements AfterViewInit {
+  constructor(private scrollService: ScrollService) {}
+
+  @Input() isHeaderStylized: boolean
+
+  @ViewChild('headerRef') headerRef: ElementRef<HTMLDivElement>
+
+  ngAfterViewInit(): void {
+    this.scrollService.getHeaderHeight(
+      this.headerRef.nativeElement.offsetHeight
+    )
+  }
+}

@@ -1,4 +1,8 @@
-<header class="header">
+<header
+  class="header"
+  [ngClass]="{ 'light-dark': isHeaderStylized }"
+  #headerRef
+>
   <div class="container">
     <div class="header__wrapper">
       <a class="logo" href="#">Panto</a>
