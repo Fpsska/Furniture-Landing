@@ -21,35 +21,10 @@
     <div class="container container--products">
       <div class="products__wrapper">
         <h2 class="products__title">Best Selling Product</h2>
-        <div class="products__selection selection">
-          <button
-            #chair
-            class="selection__button active"
-            (click)="filterProducts(chair)"
-          >
-            Chair
-          </button>
-          <button
-            class="selection__button"
-            #beds
-            (click)="filterProducts(beds)"
-          >
-            Beds
-          </button>
-          <button
-            #sofa
-            class="selection__button"
-            (click)="filterProducts(sofa)"
-          >
-            Sofa
-          </button>
-          <button
-            #lamp
-            class="selection__button"
-            (click)="filterProducts(lamp)"
-          >
-            Lamp
-          </button>
+        <div class="products__selection">
+          <app-selection
+            [updateFilterOption]="updateFilterOption.bind(this)"
+          ></app-selection>
         </div>
         <div class="products__gallery">
           <div

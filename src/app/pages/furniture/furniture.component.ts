@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 import { Ifeature } from 'src/app/models/feature'
 import { Iproduct } from 'src/app/models/product'
@@ -23,7 +23,7 @@ SwiperCore.use([Navigation])
   templateUrl: './furniture.component.html',
   styleUrls: ['./furniture.component.scss']
 })
-export class FurnitureComponent implements OnInit, OnChanges {
+export class FurnitureComponent implements OnInit {
   featuresDataTemplates: Ifeature[] = featuresData
   commentsData: Icomment[] = []
   // productsData$: Observable<Iproduct[]>
@@ -58,8 +58,6 @@ export class FurnitureComponent implements OnInit, OnChanges {
     private productService: ProductService
   ) {}
 
-  ngOnChanges(): void {}
-
   ngOnInit(): void {
     // handle commentsData
     this.isCommentsDataLoading = true
@@ -76,10 +74,12 @@ export class FurnitureComponent implements OnInit, OnChanges {
     })
   }
 
-  filterProducts(refElement: any) {
-    // return refElement.innerText.toLowerCase()
-    // const filterOpt = refElement.innerText.toLowerCase()
+  updateFilterOption(reference: any): void {
+    this.filterOption = reference
+    console.log(reference)
+  }
+
+  changeFilterOption(refElement: any): void {
     this.filterOption = refElement.innerText.toLowerCase()
-    // console.log(filterOpt)
   }
 }

@@ -26,7 +26,8 @@ import { FormSearchComponent } from './components/form-search/form-search.compon
 import { ButtonScrollComponent } from './components/button-scroll/button-scroll.component'
 import { StartSectionComponent } from './components/start-section/start-section.component'
 import { RatingComponent } from './components/rating/rating.component';
-import { FilterProductsPipe } from './pipes/filter-products.pipe'
+import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { SelectionComponent } from './components/selection/selection.component'
 
 // /. imports
 
@@ -53,7 +54,8 @@ import { FilterProductsPipe } from './pipes/filter-products.pipe'
     ButtonScrollComponent,
     StartSectionComponent,
     RatingComponent,
-    FilterProductsPipe
+    FilterProductsPipe,
+    SelectionComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

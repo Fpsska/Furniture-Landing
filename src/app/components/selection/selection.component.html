@@ -1,0 +1,10 @@
+<div class="selection">
+  <button
+    *ngFor="let button of selectButtonsDataTemplates"
+    class="selection__button"
+    [ngClass]="{ active: button.isActive }"
+    (click)="updateFilterOption(button.reference)"
+  >
+    {{ button.text }}
+  </button>
+</div>
