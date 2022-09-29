@@ -11,7 +11,7 @@ import { Iproduct } from '../../models/product'
 })
 export class ProductComponent {
   @Input() item: Iproduct
-  @Input() isProductsDataLoading: boolean
+  @Input() loadingStatus: boolean
 
   public handleImageError(event: any) {
     event.target.src = 'https://via.placeholder.com/260x280'

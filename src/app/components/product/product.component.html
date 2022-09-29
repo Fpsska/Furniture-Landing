@@ -1,4 +1,4 @@
-<article class="product" [ngClass]="{ loading: isProductsDataLoading }">
+<article class="product" [ngClass]="{ loading: loadingStatus }">
   <img
     class="product__image"
     [src]="item.image"
@@ -10,7 +10,7 @@
     <div class="product__top">
       <span class="product__name" [title]="item.name">{{ item.name }}</span>
       <h4 class="product__model" [title]="item.model">{{ item.model }}</h4>
-      <app-rating [status]="isProductsDataLoading"></app-rating>
+      <app-rating [status]="loadingStatus"></app-rating>
     </div>
 
     <div class="product__bottom">
@@ -20,7 +20,7 @@
       <button
         class="product__button"
         aria-label="add product to basket"
-        [disabled]="isProductsDataLoading"
+        [disabled]="loadingStatus"
       >
         <svg
           width="21"

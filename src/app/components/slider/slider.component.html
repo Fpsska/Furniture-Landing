@@ -1,31 +1,51 @@
 <ng-container>
   <!-- swiper -->
-  <swiper [config]="role ? configProductSlider : configTestimonialSlider">
-    <ng-template swiperSlide *ngFor="let item of currentRenderData">
-      <div *ngIf="role; then thenBlock; else elseBlock"></div>
-
-      <ng-template #thenBlock>
-        <app-product [item]="item"></app-product>
-      </ng-template>
-      <ng-template #elseBlock>
-        <app-testimonial
+  <swiper [config]="currentSliderConfig">
+    <ng-container *ngIf="currentRenderData.length !== 0 && filterOption">
+      <ng-template
+        swiperSlide
+        *ngFor="let item of currentRenderData | filterProducts: filterOption"
+      >
+        <app-product
           [item]="item"
-          [isCommentsDataLoading]="isCommentsDataLoading"
-        ></app-testimonial>
+          [loadingStatus]="loadingStatus"
+        ></app-product>
       </ng-template>
-    </ng-template>
+    </ng-container>
+    <!--  -->
+    <ng-container *ngIf="currentRenderData.length === 0 || !currentSliderRole">
+      <ng-template swiperSlide>
+        <article class="placeholder-card">
+          <span class="placeholder-card__title">
+            {{ 'data not found' | uppercase }}
+          </span>
+        </article>
+      </ng-template>
+    </ng-container>
+    <!--  -->
+
+    <ng-container *ngIf="currentRenderData.length !== 0">
+      <ng-template swiperSlide *ngFor="let item of currentRenderData">
+        <ng-container *ngIf="currentSliderRole === 'testimonial'">
+          <app-testimonial
+            [item]="item"
+            [loadingStatus]="loadingStatus"
+          ></app-testimonial>
+        </ng-container>
+      </ng-template>
+    </ng-container>
   </swiper>
   <!-- swiper navigation -->
-  <app-slider-button
-    action="next"
-    [role]="role ? 'product' : 'testimonial'"
-    [isCommentsDataLoading]="isCommentsDataLoading"
-    [isProductsDataLoading]="isProductsDataLoading"
-  ></app-slider-button>
-  <app-slider-button
-    action="prev"
-    [role]="role ? 'product' : 'testimonial'"
-    [isCommentsDataLoading]="isCommentsDataLoading"
-    [isProductsDataLoading]="isProductsDataLoading"
-  ></app-slider-button>
+  <ng-container *ngIf="currentRenderData.length">
+    <app-slider-button
+      action="next"
+      [role]="currentSliderRole"
+      [loadingStatus]="loadingStatus"
+    ></app-slider-button>
+    <app-slider-button
+      action="prev"
+      [role]="currentSliderRole"
+      [loadingStatus]="loadingStatus"
+    ></app-slider-button>
+  </ng-container>
 </ng-container>

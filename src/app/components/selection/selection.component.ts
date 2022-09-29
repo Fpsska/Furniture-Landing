@@ -16,7 +16,9 @@ export class SelectionComponent implements OnInit {
 
   @Input() updateFilterOption: (arg: string) => void
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.updateFilterOption('')
+  }
 
   handleButtonClick(_id: number, reference: string) {
     this.updateFilterOption(reference)

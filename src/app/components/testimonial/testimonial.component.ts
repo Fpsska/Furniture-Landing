@@ -11,7 +11,7 @@ import { Icomment } from 'src/app/models/comment'
 })
 export class TestimonialComponent implements OnInit {
   @Input() item: Icomment
-  @Input() isCommentsDataLoading: boolean
+  @Input() loadingStatus: boolean
 
   public handleImageError(event: any, role: string) {
     switch (role) {

@@ -40,21 +40,17 @@
               <app-product
                 *ngFor="let product of productsMockData"
                 [item]="product"
-                [isProductsDataLoading]="isProductsDataLoading"
+                [loadingStatus]="isProductsDataLoading"
               ></app-product>
             </div>
           </ng-template>
           <ng-template #productsSlider>
-            <swiper [config]="configProductSlider">
-              <ng-template
-                swiperSlide
-                *ngFor="
-                  let product of productsData | filterProducts: filterOption
-                "
-              >
-                <app-product [item]="product"></app-product>
-              </ng-template>
-            </swiper>
+            <app-slider
+              role="product"
+              [data]="productsData"
+              [filterOption]="filterOption"
+              [loadingStatus]="isProductsDataLoading"
+            ></app-slider>
           </ng-template>
         </div>
         <app-button title="View All"></app-button>
@@ -126,16 +122,16 @@
               <app-testimonial
                 *ngFor="let comment of commentsMockData"
                 [item]="comment"
-                [isCommentsDataLoading]="isCommentsDataLoading"
+                [loadingStatus]="isCommentsDataLoading"
               ></app-testimonial>
             </div>
           </ng-template>
           <ng-template #testimonialsSlider>
-            <swiper [config]="configTestimonialSlider">
-              <ng-template swiperSlide *ngFor="let item of commentsData">
-                <app-testimonial [item]="item"></app-testimonial>
-              </ng-template>
-            </swiper>
+            <app-slider
+              role="testimonial"
+              [data]="commentsData"
+              [loadingStatus]="isCommentsDataLoading"
+            ></app-slider>
           </ng-template>
         </div>
       </div>

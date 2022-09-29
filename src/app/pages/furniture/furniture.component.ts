@@ -10,12 +10,6 @@ import { CommentService } from 'src/app/services/comment.service'
 import { ProductService } from 'src/app/services/product.service'
 import { Observable } from 'rxjs'
 
-// import Swiper core and required modules
-import SwiperCore, { SwiperOptions, Navigation } from 'swiper'
-
-// install Swiper modules
-SwiperCore.use([Navigation])
-
 // /. imports
 
 @Component({
@@ -30,28 +24,9 @@ export class FurnitureComponent implements OnInit {
   productsData: Iproduct[] = []
   productsMockData: any[] = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
   commentsMockData: any[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
-  filterOption: string = ''
+  filterOption: string = 'all'
   isCommentsDataLoading: boolean = false
   isProductsDataLoading: boolean = false
-
-  configProductSlider: SwiperOptions = {
-    slidesPerView: 4,
-    spaceBetween: 42,
-    navigation: {
-      nextEl: '.swiper-button.next.product',
-      prevEl: '.swiper-button.prev.product'
-    },
-    loop: false
-  }
-  configTestimonialSlider: SwiperOptions = {
-    slidesPerView: 3,
-    spaceBetween: 40,
-    navigation: {
-      nextEl: '.swiper-button.next.testimonial',
-      prevEl: '.swiper-button.prev.testimonial'
-    },
-    loop: false
-  }
 
   constructor(
     private commentService: CommentService,
@@ -76,9 +51,5 @@ export class FurnitureComponent implements OnInit {
 
   updateFilterOption(reference: any): void {
     this.filterOption = reference
-  }
-
-  changeFilterOption(refElement: any): void {
-    this.filterOption = refElement.innerText.toLowerCase()
   }
 }

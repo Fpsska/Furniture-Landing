@@ -7,7 +7,7 @@
     testimonial: role == 'testimonial'
   }"
   attr.aria-label="swipe to {{ action }} {{ role }}"
-  [disabled]="isCommentsDataLoading || isProductsDataLoading"
+  [disabled]="loadingStatus"
 >
   <svg
     width="21"

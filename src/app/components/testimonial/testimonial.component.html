@@ -1,4 +1,4 @@
-<article class="testimonial" [ngClass]="{ loading: isCommentsDataLoading }">
+<article class="testimonial" [ngClass]="{ loading: loadingStatus }">
   <img
     class="testimonial__background"
     [src]="item.backgroundIMG"
@@ -26,7 +26,7 @@
       <blockquote class="testimonial__comment">
         <p>{{ item.message }}</p>
       </blockquote>
-      <app-rating [status]="isCommentsDataLoading"></app-rating>
+      <app-rating [status]="loadingStatus"></app-rating>
     </div>
   </div>
 </article>
