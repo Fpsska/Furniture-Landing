@@ -24,6 +24,7 @@
         <div class="products__selection">
           <app-selection
             [updateFilterOption]="updateFilterOption.bind(this)"
+            [loadingStatus]="isProductsDataLoading"
           ></app-selection>
         </div>
         <div class="products__gallery">
@@ -130,6 +131,7 @@
             <app-slider
               role="testimonial"
               [data]="commentsData"
+              [filterOption]="filterOption"
               [loadingStatus]="isCommentsDataLoading"
             ></app-slider>
           </ng-template>

@@ -10,5 +10,7 @@ import { Ifeature } from 'src/app/models/feature'
   styleUrls: ['./column.component.scss']
 })
 export class ColumnComponent {
-  @Input('column') column: Ifeature
+  @Input() column: Ifeature
+
+  // /. props
 }

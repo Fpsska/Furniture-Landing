@@ -13,6 +13,8 @@ export class ProductComponent {
   @Input() item: Iproduct
   @Input() loadingStatus: boolean
 
+  // /. props
+
   public handleImageError(event: any) {
     event.target.src = 'https://via.placeholder.com/260x280'
   }

@@ -11,4 +11,6 @@ import { Ilist } from 'src/app/models/list'
 })
 export class ListComponent {
   @Input('list') list: Ilist
+
+  // /. props
 }

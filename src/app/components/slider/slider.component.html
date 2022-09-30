@@ -1,31 +1,17 @@
 <ng-container>
   <!-- swiper -->
   <swiper [config]="currentSliderConfig">
-    <ng-container *ngIf="currentRenderData.length !== 0 && filterOption">
-      <ng-template
-        swiperSlide
-        *ngFor="let item of currentRenderData | filterProducts: filterOption"
-      >
-        <app-product
-          [item]="item"
-          [loadingStatus]="loadingStatus"
-        ></app-product>
-      </ng-template>
-    </ng-container>
-    <!--  -->
-    <ng-container *ngIf="currentRenderData.length === 0 || !currentSliderRole">
-      <ng-template swiperSlide>
-        <article class="placeholder-card">
-          <span class="placeholder-card__title">
-            {{ 'data not found' | uppercase }}
-          </span>
-        </article>
-      </ng-template>
-    </ng-container>
-    <!--  -->
-
-    <ng-container *ngIf="currentRenderData.length !== 0">
+    <!-- without filtering mode / default case  -->
+    <ng-container
+      *ngIf="data.length !== 0 && currentSliderRole && !filterOption"
+    >
       <ng-template swiperSlide *ngFor="let item of currentRenderData">
+        <ng-container *ngIf="currentSliderRole === 'product'">
+          <app-product
+            [item]="item"
+            [loadingStatus]="loadingStatus"
+          ></app-product>
+        </ng-container>
         <ng-container *ngIf="currentSliderRole === 'testimonial'">
           <app-testimonial
             [item]="item"
@@ -34,9 +20,66 @@
         </ng-container>
       </ng-template>
     </ng-container>
+
+    <!-- include filtering -->
+    <ng-container
+      *ngIf="data.length !== 0 && currentSliderRole && filterOption"
+    >
+      <ng-container *ngIf="currentSliderRole === 'product'">
+        <ng-template
+          swiperSlide
+          *ngFor="let item of data | filterProducts: filterOption"
+        >
+          <app-product
+            [item]="item"
+            [loadingStatus]="loadingStatus"
+          ></app-product>
+        </ng-template>
+      </ng-container>
+
+      <ng-container *ngIf="currentSliderRole === 'testimonial'">
+        <ng-template swiperSlide *ngFor="let item of data">
+          <app-testimonial
+            [item]="item"
+            [loadingStatus]="loadingStatus"
+          ></app-testimonial>
+        </ng-template>
+      </ng-container>
+    </ng-container>
+
+    <!-- include filtering && return [] -->
+    <ng-container *ngIf="filterOption">
+      <ng-container *ngIf="data | filterProducts: filterOption as filteredData">
+        <ng-template swiperSlide *ngIf="filteredData.length === 0">
+          <article class="placeholder-card">
+            <span class="placeholder-card__title">no mathes yet</span>
+          </article>
+        </ng-template>
+      </ng-container>
+    </ng-container>
+
+    <!-- without data[] -->
+    <ng-container *ngIf="data.length === 0">
+      <ng-template swiperSlide>
+        <article class="placeholder-card">
+          <span class="placeholder-card__title">
+            <b>data {{ currentSliderRole ? '' : '& role' }}</b> not found
+          </span>
+        </article>
+      </ng-template>
+    </ng-container>
+
+    <!-- without data[] && role  -->
+    <ng-container *ngIf="!currentSliderRole && data.length !== 0">
+      <ng-template swiperSlide>
+        <article class="placeholder-card">
+          <span class="placeholder-card__title"> <b>role</b> not found </span>
+        </article>
+      </ng-template>
+    </ng-container>
   </swiper>
   <!-- swiper navigation -->
-  <ng-container *ngIf="currentRenderData.length">
+  <ng-container *ngIf="data.length !== 0 && currentSliderRole">
     <app-slider-button
       action="next"
       [role]="currentSliderRole"

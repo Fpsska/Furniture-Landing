@@ -10,6 +10,8 @@ import { Component, Input, OnInit } from '@angular/core'
 export class PlaceholderSectionComponent implements OnInit {
   @Input() pageName: string
 
+  // /. props
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -11,4 +11,6 @@ export class SliderButtonComponent {
   @Input() action: string
   @Input() role: string
   @Input() loadingStatus: boolean
+
+  // /. props
 }

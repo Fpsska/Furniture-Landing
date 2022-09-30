@@ -3,7 +3,7 @@ export const selectButtonsData = [
     id: 1,
     text: 'Chair',
     reference: 'chair',
-    isActive: true
+    isActive: false
   },
   {
     id: 2,

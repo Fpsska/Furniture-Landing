@@ -4,6 +4,7 @@
     class="selection__button"
     [ngClass]="{ active: button.isActive }"
     (click)="handleButtonClick(button.id, button.reference)"
+    [disabled]="loadingStatus"
   >
     {{ button.text }}
   </button>

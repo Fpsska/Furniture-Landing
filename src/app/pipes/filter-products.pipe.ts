@@ -9,7 +9,6 @@ import { Iproduct } from '../models/product'
 })
 export class FilterProductsPipe implements PipeTransform {
   transform(products: Iproduct[], filterOpt: string): Iproduct[] {
-    console.log(products, filterOpt)
     return products.filter(({ name }) => {
       if (!filterOpt || filterOpt === 'all') {
         return products

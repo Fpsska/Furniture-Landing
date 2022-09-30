@@ -13,7 +13,9 @@ export class TestimonialComponent implements OnInit {
   @Input() item: Icomment
   @Input() loadingStatus: boolean
 
-  public handleImageError(event: any, role: string) {
+  // /. props
+
+  handleImageError(event: any, role: string): void {
     switch (role) {
       case 'avatar':
         event.target.src = 'https://via.placeholder.com/50x50'

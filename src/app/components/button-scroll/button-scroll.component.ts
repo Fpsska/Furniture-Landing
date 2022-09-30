@@ -12,6 +12,8 @@ import { ViewportScroller } from '@angular/common'
 export class ButtonScrollComponent implements OnInit {
   @Input() anchorID: string
 
+  // /. props
+
   constructor(private scroller: ViewportScroller) {}
 
   ngOnInit(): void {

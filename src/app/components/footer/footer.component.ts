@@ -13,4 +13,6 @@ import { footerData } from '../../data/footerData'
 })
 export class FooterComponent {
   footerDataTemplates: Ilist[] = footerData
+
+  // /. state
 }

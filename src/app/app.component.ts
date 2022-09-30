@@ -12,6 +12,8 @@ import { ScrollService } from './services/scroll.service'
 export class AppComponent implements OnInit {
   isHeaderStylized: boolean = false
 
+  // /. state
+
   constructor(private scrollService: ScrollService) {}
 
   ngOnInit(): void {}

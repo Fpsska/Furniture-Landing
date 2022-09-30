@@ -10,6 +10,8 @@ import { Component, OnInit, Input } from '@angular/core'
 export class RatingComponent implements OnInit {
   @Input() status: boolean
 
+  // /. props
+
   constructor() {}
 
   ngOnInit(): void {}

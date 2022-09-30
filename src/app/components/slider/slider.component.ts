@@ -1,7 +1,15 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core'
+import {
+  Component,
+  Input,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+  ViewEncapsulation
+} from '@angular/core'
+import { Iproduct } from 'src/app/models/product'
 
 // import Swiper core and required modules
-import SwiperCore, { SwiperOptions, Navigation } from 'swiper'
+import SwiperCore, { SwiperOptions, Navigation, Thumbs } from 'swiper'
 
 // install Swiper modules
 SwiperCore.use([Navigation])
@@ -14,16 +22,18 @@ SwiperCore.use([Navigation])
   styleUrls: ['./slider.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnChanges {
   @Input() role: string
   @Input() data: any[]
   @Input() filterOption?: string
   @Input() loadingStatus: boolean
 
+  // /. props
+
   currentRenderData: any[] = []
   currentSliderConfig: any = {}
   currentSliderRole: string = ''
-  dataArr: any[] = []
+
   productSliderConfig: SwiperOptions = {
     slidesPerView: 4,
     spaceBetween: 42,
@@ -47,29 +57,34 @@ export class SliderComponent implements OnInit {
     loop: true
   }
 
-  ngOnInit(): void {
-    this.defineSliderOptions(this.role, this.data.length)
+  // /. state
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.filterOption || changes.role || changes.data) {
+      this.defineSliderOptions(this.role, this.data.length)
+    }
   }
 
-  defineSliderOptions(role: string, arrayLength: number) {
+  defineSliderOptions(role: string, arrayLength: number): void {
     switch (role) {
       case 'product':
+        console.log('product')
         this.currentRenderData = this.data
         this.currentSliderConfig =
-          arrayLength > 0 ? this.productSliderConfig : this.emptySliderConfig
+          arrayLength !== 0 ? this.productSliderConfig : this.emptySliderConfig
         this.currentSliderRole = role
         break
       case 'testimonial':
+        console.log('testimonial')
         this.currentRenderData = this.data
         this.currentSliderConfig =
-          arrayLength > 0
+          arrayLength !== 0
             ? this.testimonialSliderConfig
             : this.emptySliderConfig
         this.currentSliderRole = role
         break
       default:
-        this.currentRenderData = []
-        this.currentSliderRole = ''
+        console.log('default')
         this.currentSliderConfig = this.emptySliderConfig
     }
   }

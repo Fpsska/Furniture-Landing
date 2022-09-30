@@ -263,38 +263,6 @@ body {
     }
 }
 
-.selection {
-    display: flex;
-    justify-content: space-between;
-    padding: useRem(6);
-    background-color: #EEEEEE;
-    border-radius: useRem(44);
-
-    &__button {
-        background-color: transparent;
-        color: $dark-color;
-        border-radius: useRem(32);
-        padding: useRem(7) useRem(12);
-        font-size: useRem(18);
-        font-weight: 500;
-        opacity: .8;
-        transition: all .3s linear;
-
-        &:hover {
-            background-color: rgba($color: $white-color, $alpha: .8);
-        }
-
-        &:not(:last-child) {
-            margin: 0 useRem(40) 0 0;
-        }
-    }
-
-    &__button.active {
-        background-color: $white-color;
-    }
-
-}
-
 .about {
     &__wrapper {
         display: flex;
@@ -390,7 +358,7 @@ body {
 
     &__title {
         font-size: useRem(16);
-        font-weight: 700;
+        text-transform: uppercase;
     }
 }
 

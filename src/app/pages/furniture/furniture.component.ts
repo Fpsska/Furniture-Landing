@@ -28,6 +28,8 @@ export class FurnitureComponent implements OnInit {
   isCommentsDataLoading: boolean = false
   isProductsDataLoading: boolean = false
 
+  // /. state
+
   constructor(
     private commentService: CommentService,
     private productService: ProductService
