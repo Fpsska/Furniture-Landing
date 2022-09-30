@@ -4,6 +4,7 @@
 @import 'vars.scss';
 @import 'mixins.scss';
 @import 'functions.scss';
+@import 'media.scss';
 
 // /. imports
 
@@ -185,6 +186,7 @@ body {
         line-height: useRem(49);
         font-weight: 700;
         color: $dark-color;
+        text-align: center;
     }
 
     &__selection {

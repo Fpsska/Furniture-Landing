@@ -17,6 +17,7 @@
         display: flex;
         justify-content: space-between;
         margin: 0 0 useRem(118) 0;
+        gap: useRem(20);
     }
 
     &__text {

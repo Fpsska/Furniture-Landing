@@ -59,7 +59,7 @@ export class SliderComponent implements OnChanges {
     320: {
       slidesPerView: 1
     },
-    425: {
+    768: {
       slidesPerView: 2
     },
     1024: {
