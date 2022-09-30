@@ -113,6 +113,10 @@
         }
     }
 
+    .placeholder .placeholder__wrapper .placeholder__title {
+        font-size: useRem(32);
+    }
+
     .footer .footer__links {
         flex-direction: column;
         align-items: center;
@@ -120,6 +124,10 @@
         .links__terms {
             margin: useRem(20) 0;
         }
+    }
+
+    .form-feedback__wrapper {
+        flex-direction: column;
     }
 }
 

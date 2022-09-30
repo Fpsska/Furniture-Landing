@@ -30,11 +30,13 @@
     &__title {
         font-size: useRem(42);
         text-transform: uppercase;
+        text-align: center;
     }
 
     &__message {
         font-size: useRem(18);
         font-style: italic;
+        text-align: center;
         margin: 0 0 useRem(26) 0;
     }
 }
@@ -110,7 +112,7 @@
     }
 
     &__button {
-        flex: 0 0 30%;
+        flex: 0 1 30%;
         text-transform: uppercase;
         background-color: $dark-color;
         color: $white-color;
