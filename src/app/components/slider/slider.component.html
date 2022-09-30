@@ -1,6 +1,6 @@
 <ng-container>
   <!-- swiper -->
-  <swiper [config]="currentSliderConfig">
+  <swiper [config]="currentSliderConfig" [breakpoints]="currentSliderBPConfig">
     <!-- without filtering mode / default case  -->
     <ng-container
       *ngIf="data.length !== 0 && currentSliderRole && !filterOption"

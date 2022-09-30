@@ -1,15 +1,13 @@
 import {
   Component,
   Input,
-  OnInit,
   OnChanges,
   SimpleChanges,
   ViewEncapsulation
 } from '@angular/core'
-import { Iproduct } from 'src/app/models/product'
 
 // import Swiper core and required modules
-import SwiperCore, { SwiperOptions, Navigation, Thumbs } from 'swiper'
+import SwiperCore, { SwiperOptions, Navigation } from 'swiper'
 
 // install Swiper modules
 SwiperCore.use([Navigation])
@@ -32,6 +30,7 @@ export class SliderComponent implements OnChanges {
 
   currentRenderData: any[] = []
   currentSliderConfig: any = {}
+  currentSliderBPConfig: { [key: number]: { [key: string]: number } } = {}
   currentSliderRole: string = ''
 
   productSliderConfig: SwiperOptions = {
@@ -56,6 +55,31 @@ export class SliderComponent implements OnChanges {
     slidesPerView: 1,
     loop: true
   }
+  productSliderBPConfig: { [key: number]: { [key: string]: number } } = {
+    320: {
+      slidesPerView: 1
+    },
+    425: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
+    1440: {
+      slidesPerView: 4
+    }
+  }
+  testimonialSliderBPConfig: { [key: number]: { [key: string]: number } } = {
+    320: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1440: {
+      slidesPerView: 3
+    }
+  }
 
   // /. state
 
@@ -72,6 +96,7 @@ export class SliderComponent implements OnChanges {
         this.currentRenderData = this.data
         this.currentSliderConfig =
           arrayLength !== 0 ? this.productSliderConfig : this.emptySliderConfig
+        this.currentSliderBPConfig = this.productSliderBPConfig
         this.currentSliderRole = role
         break
       case 'testimonial':
@@ -81,6 +106,7 @@ export class SliderComponent implements OnChanges {
           arrayLength !== 0
             ? this.testimonialSliderConfig
             : this.emptySliderConfig
+        this.currentSliderBPConfig = this.testimonialSliderBPConfig
         this.currentSliderRole = role
         break
       default:

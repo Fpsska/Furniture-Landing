@@ -1,14 +1,6 @@
-@import './vars.scss';
+@import './vars';
 
 // /. imports
-
-
-@function useRem($size) {
-    $remSize: #{$size / $font-size}rem;
-    @return $remSize;
-}
-
-// /. functions
 
 @mixin hide-text {
     display: block;
