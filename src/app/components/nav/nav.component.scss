@@ -3,6 +3,36 @@
 
 // /. imports
 
+:host-context(.burger__nav) {
+    .nav__menu {
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 100vh - useRem(117);
+    }
+
+    .nav__item {
+
+        padding: useRem(5) 0;
+
+        &:not(:last-child) {
+            margin: 0 0 useRem(20) 0;
+            border-bottom: 1px solid $orange-color;
+        }
+
+    }
+
+    .nav__link {
+        display: block;
+        font-size: useRem(22);
+        transition: all .25s ease-in-out;
+
+        &:hover {
+            transform: translateX(useRem(10));
+        }
+    }
+}
+
 .nav {
     &__menu {
         display: flex;

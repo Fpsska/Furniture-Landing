@@ -1,12 +1,14 @@
 import {
   Component,
   Input,
+  OnInit,
   AfterViewInit,
   ViewChild,
   ElementRef
 } from '@angular/core'
 
 import { ScrollService } from 'src/app/services/scroll.service'
+import { BurgerService } from 'src/app/services/burger.service'
 
 // /. imports
 
@@ -15,10 +17,25 @@ import { ScrollService } from 'src/app/services/scroll.service'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements AfterViewInit {
-  constructor(private scrollService: ScrollService) {}
-
+export class HeaderComponent implements OnInit, AfterViewInit {
   @Input() isHeaderStylized: boolean
+
+  // /. props
+
+  isBurgerClose: boolean = false
+
+  // /. state
+
+  constructor(
+    private scrollService: ScrollService,
+    private burgerService: BurgerService
+  ) {}
+
+  ngOnInit() {
+    this.burgerService.getBurgerVisibleStatus().subscribe(status => {
+      this.isBurgerClose = status
+    })
+  }
 
   @ViewChild('headerRef') headerRef: ElementRef<HTMLDivElement>
 
@@ -26,5 +43,9 @@ export class HeaderComponent implements AfterViewInit {
     this.scrollService.getHeaderHeight(
       this.headerRef.nativeElement.offsetHeight
     )
+  }
+
+  handleBurgerButton() {
+    this.burgerService.switchBurgerVisibleStatus(!this.isBurgerClose)
   }
 }

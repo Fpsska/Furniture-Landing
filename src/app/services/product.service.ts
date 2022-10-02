@@ -14,6 +14,8 @@ export class ProductService {
   productsData: Iproduct[] = []
   URL = 'https://my-json-server.typicode.com/Fpsska/mockjson/products'
 
+  // /. state
+
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Iproduct[]> {

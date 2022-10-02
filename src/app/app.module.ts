@@ -27,7 +27,8 @@ import { ButtonScrollComponent } from './components/button-scroll/button-scroll.
 import { StartSectionComponent } from './components/start-section/start-section.component'
 import { RatingComponent } from './components/rating/rating.component'
 import { FilterProductsPipe } from './pipes/filter-products.pipe'
-import { SelectionComponent } from './components/selection/selection.component'
+import { SelectionComponent } from './components/selection/selection.component';
+import { BurgerComponent } from './components/burger/burger.component'
 
 // /. imports
 
@@ -55,7 +56,8 @@ import { SelectionComponent } from './components/selection/selection.component'
     StartSectionComponent,
     RatingComponent,
     FilterProductsPipe,
-    SelectionComponent
+    SelectionComponent,
+    BurgerComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, SwiperModule],
   providers: [],

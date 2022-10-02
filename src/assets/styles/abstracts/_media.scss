@@ -63,8 +63,16 @@
         max-width: 100%;
     }
 
-    .header .header__nav {
+    .header .header__wrapper .header__nav {
         display: none;
+    }
+
+    .header .header__wrapper .burger-button {
+        display: flex;
+    }
+
+    .header .header__wrapper .burger {
+        display: block;
     }
 
     .footer .footer__wrapper .footer__content {

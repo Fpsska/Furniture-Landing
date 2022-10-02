@@ -1,0 +1,28 @@
+@import 'vars.scss';
+@import 'functions.scss';
+
+// /. imports
+
+.burger {
+    max-width: useRem(280);
+    width: 40%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+    position: fixed;
+    top: useRem(117);
+    right: 0;
+
+    &__wrapper {
+        background-color: rgba(30, 30, 30, 0.9);
+        padding: useRem(20) 0 useRem(20) useRem(40);
+        height: calc(100vh - useRem(117));
+        overflow-y: auto;
+    }
+}
+
+.burger.rounded {
+    .burger__wrapper {
+        border-radius: useRem(15) 0 0 0;
+    }
+}
