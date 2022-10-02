@@ -48,6 +48,12 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .footer .footer__wrapper .footer__content {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .page .main .welcome {
         min-height: useRem(850);
@@ -62,7 +68,12 @@
     }
 
     .footer .footer__wrapper .footer__content {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer__text,
+    .footer__description {
+        text-align: center;
     }
 }
 
@@ -87,17 +98,12 @@
         text-align: center;
     }
 
-    .footer .container .footer__wrapper {
-        padding: useRem(100) 0 useRem(56) 0;
+    .footer .footer__wrapper .footer__content {
+        gap: useRem(50);
     }
 
-    .footer .footer__wrapper .footer__content {
-        gap: useRem(30);
-
-        .footer__text {
-            text-align: center;
-            max-width: 100%;
-        }
+    .footer .container .footer__wrapper {
+        padding: useRem(100) 0 useRem(56) 0;
     }
 }
 
@@ -112,10 +118,19 @@
 
     .products .container .products__selection .selection {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
 
         .selection__button {
             width: 100%;
             margin: 0;
+            border-radius: useRem(44);
+
+            &:first-child,
+            &:last-child {
+                border-radius: 0;
+            }
         }
     }
 
@@ -123,9 +138,17 @@
         font-size: useRem(32);
     }
 
+    .footer .footer__wrapper .footer__content {
+        margin: 0 0 useRem(80) 0;
+    }
+
+    .footer .footer__wrapper .footer__content .footer__column {
+        grid-column: 4 span;
+    }
+
     .footer .footer__links {
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
 
         .links__terms {
             margin: useRem(20) 0;
@@ -133,12 +156,6 @@
     }
 
     .form-feedback__wrapper {
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .footer .footer__wrapper .footer__content {
         flex-direction: column;
     }
 }

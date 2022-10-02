@@ -14,14 +14,19 @@
     }
 
     &__content {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
         margin: 0 0 useRem(118) 0;
-        gap: useRem(20);
+        gap: useRem(100);
+    }
+
+    &__column {
+        grid-column: 2 span;
     }
 
     &__text {
-        max-width: useRem(300);
+        grid-column: 4 span;
+        // max-width: useRem(300);
         display: flex;
         flex-direction: column;
         justify-content: space-between;

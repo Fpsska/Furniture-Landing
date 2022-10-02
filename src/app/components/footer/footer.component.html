@@ -2,7 +2,7 @@
   <div class="container container--footer">
     <div class="footer__wrapper">
       <div class="footer__content">
-        <div class="footer__text">
+        <div class="footer__text footer__column">
           <a class="footer__logo logo" href="#">Panto</a>
           <p class="footer__description">
             Panto The advantage of hiring a workspace with us is that givees you
@@ -11,6 +11,7 @@
         </div>
 
         <app-list
+          class="footer__column"
           *ngFor="let item of footerDataTemplates"
           [list]="item"
         ></app-list>
