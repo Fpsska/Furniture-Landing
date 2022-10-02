@@ -151,10 +151,13 @@ body {
 
     &__wrapper {
         display: grid;
-        align-items: center;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(useRem(284), 1fr));
-        gap: useRem(20);
+        grid-template-columns: repeat(12, 1fr);
+        // align-items: center;
+        gap: useRem(30);
+    }
+
+    &__column {
+        grid-column: 3 span;
     }
 
     &__title {
@@ -162,8 +165,10 @@ body {
         font-weight: 700;
         font-size: useRem(42);
         line-height: useRem(49);
+        margin: auto 0;
     }
 }
+
 
 .products {
     background-color: $primary-color;

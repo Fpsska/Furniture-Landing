@@ -26,7 +26,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/assets/styles/base/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/assets/styles"]
+              "includePaths": ["src/assets/styles/abstracts"]
             },
             "scripts": []
           },
@@ -92,7 +92,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/assets/styles/base/styles.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/assets/styles"]
+              "includePaths": ["src/assets/styles/abstracts"]
             },
             "scripts": []
           }

@@ -6,7 +6,7 @@
 
 .swiper-button {
     transition: all .2s linear;
-    background-color: $white-color;
+    background-color: rgba($color: $white-color, $alpha: .6);
     border-radius: useRem(25);
     box-shadow: 0 useRem(8) useRem(20) rgba(0, 0, 0, 0.06);
     width: useRem(50);

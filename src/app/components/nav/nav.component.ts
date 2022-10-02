@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 // /. imports
 
@@ -7,4 +7,8 @@ import { Component } from '@angular/core'
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {}
+export class NavComponent {
+  @Input() role?: string
+
+  // /. props
+}

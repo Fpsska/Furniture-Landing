@@ -11,6 +11,7 @@ import { Ifeature } from 'src/app/models/feature'
 })
 export class ColumnComponent {
   @Input() column: Ifeature
+  @Input() role: string
 
   // /. props
 }

@@ -5,13 +5,14 @@
   <section class="features">
     <div class="container">
       <div class="features__wrapper">
-        <h2 class="features__title">
+        <h2 class="features__column features__title">
           Why <br />
           Choosing Us
         </h2>
 
         <app-column
           *ngFor="let item of featuresDataTemplates"
+          class="features__column"
           [column]="item"
         ></app-column>
       </div>
