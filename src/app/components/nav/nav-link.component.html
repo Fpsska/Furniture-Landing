@@ -1,0 +1,13 @@
+<li class="nav__item">
+  <a
+    class="nav__link"
+    [routerLink]="link.href"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="
+      link.isExactRoute ? { exact: true } : { exact: false }
+    "
+    (click)="handleLinkClick($event)"
+  >
+    {{ link.text }}
+  </a>
+</li>

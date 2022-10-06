@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   // /. props
 
-  isBurgerClose: boolean = false
+  isBurgerVisible: boolean = false
 
   // /. state
 
@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.burgerService.getBurgerVisibleStatus().subscribe(status => {
-      this.isBurgerClose = status
+      this.isBurgerVisible = status
     })
   }
 
@@ -46,6 +46,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   handleBurgerButton() {
-    this.burgerService.switchBurgerVisibleStatus(!this.isBurgerClose)
+    this.burgerService.switchBurgerVisibleStatus(!this.isBurgerVisible)
   }
 }

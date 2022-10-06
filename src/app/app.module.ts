@@ -9,6 +9,7 @@ import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/header/header.component'
 import { FooterComponent } from './components/footer/footer.component'
 import { NavComponent } from './components/nav/nav.component'
+import { NavLinkComponent } from './components/nav/nav-link.component'
 import { ListComponent } from './components/list/list.component'
 import { ColumnComponent } from './components/column/column.component'
 import { ProductComponent } from './components/product/product.component'
@@ -27,7 +28,7 @@ import { ButtonScrollComponent } from './components/button-scroll/button-scroll.
 import { StartSectionComponent } from './components/start-section/start-section.component'
 import { RatingComponent } from './components/rating/rating.component'
 import { FilterProductsPipe } from './pipes/filter-products.pipe'
-import { SelectionComponent } from './components/selection/selection.component';
+import { SelectionComponent } from './components/selection/selection.component'
 import { BurgerComponent } from './components/burger/burger.component'
 
 // /. imports
@@ -38,6 +39,7 @@ import { BurgerComponent } from './components/burger/burger.component'
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    NavLinkComponent,
     ListComponent,
     ColumnComponent,
     ProductComponent,

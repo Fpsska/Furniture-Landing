@@ -1,5 +1,11 @@
-<div class="burger" [ngClass]="{ rounded: visibleStatus && !isHeaderStylized }">
+<div
+  class="burger"
+  [ngClass]="{
+    rounded: !isHeaderStylized,
+    visible: visibleStatus
+  }"
+>
   <div class="burger__wrapper">
-    <app-nav class="burger__nav"></app-nav>
+    <app-nav role="burger__nav"></app-nav>
   </div>
 </div>

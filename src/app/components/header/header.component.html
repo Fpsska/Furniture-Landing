@@ -9,12 +9,10 @@
 
       <app-nav class="header__nav"></app-nav>
 
-      <ng-container *ngIf="isBurgerClose">
-        <app-burger
-          [visibleStatus]="isBurgerClose"
-          [isHeaderStylized]="isHeaderStylized"
-        ></app-burger>
-      </ng-container>
+      <app-burger
+        [visibleStatus]="isBurgerVisible"
+        [isHeaderStylized]="isHeaderStylized"
+      ></app-burger>
 
       <div class="header__buttons">
         <button class="header__button" aria-label="open basket" data-count="0">
@@ -34,11 +32,11 @@
 
         <button
           class="burger-button"
-          [ngClass]="{ close: isBurgerClose }"
+          [ngClass]="{ close: isBurgerVisible }"
           [attr.aria-label]="
-            isBurgerClose ? 'close burger menu' : 'open burger menu'
+            isBurgerVisible ? 'close burger menu' : 'open burger menu'
           "
-          aria-expanded="false"
+          [attr.aria-expanded]="isBurgerVisible ? true : false"
           (click)="handleBurgerButton()"
         >
           <span class="burger-button__line"></span>

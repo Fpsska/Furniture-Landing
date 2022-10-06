@@ -4,14 +4,14 @@
 // /. imports
 
 .burger {
-    max-width: useRem(280);
-    width: 40%;
+    max-width: useRem(320);
+    width: 50%;
     height: 100%;
     z-index: 2;
-    display: none;
     position: fixed;
     top: useRem(117);
-    right: 0;
+    right: -100%;
+    transition: all .35s ease-in-out;
 
     &__wrapper {
         background-color: rgba(30, 30, 30, 0.9);
@@ -25,4 +25,8 @@
     .burger__wrapper {
         border-radius: useRem(15) 0 0 0;
     }
+}
+
+.burger.visible {
+    right: 0;
 }
