@@ -15,7 +15,8 @@ export class ProductComponent {
 
   // /. props
 
-  public handleImageError(event: any) {
-    event.target.src = 'https://via.placeholder.com/260x280'
+  public handleImageError(e: Event): void {
+    const target = e.target as HTMLImageElement
+    target.src = 'https://via.placeholder.com/260x280'
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 import { Icomment } from 'src/app/models/comment'
 
@@ -9,23 +9,20 @@ import { Icomment } from 'src/app/models/comment'
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.scss']
 })
-export class TestimonialComponent implements OnInit {
+export class TestimonialComponent {
   @Input() item: Icomment
   @Input() loadingStatus: boolean
 
   // /. props
 
-  handleImageError(event: any, role: string): void {
+  handleImageError(e: Event, role: string): void {
+    const target = e.target as HTMLImageElement
     switch (role) {
       case 'avatar':
-        event.target.src = 'https://via.placeholder.com/50x50'
+        target.src = 'https://via.placeholder.com/50x50'
         break
       case 'background':
-        event.target.src = 'https://via.placeholder.com/370x475'
+        target.src = 'https://via.placeholder.com/370x475'
     }
-  }
-
-  ngOnInit(): void {
-    // console.log('item', this.item)
   }
 }

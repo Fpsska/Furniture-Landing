@@ -41,14 +41,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('headerRef') headerRef: ElementRef<HTMLDivElement>
 
   @HostListener('window:keydown.escape')
-  keyDownHandler() {
+  keyDownHandler(): void {
     if (this.isBurgerVisible) {
       this.burgerService.switchBurgerVisibleStatus(false)
     }
   }
 
   @HostListener('window:resize', ['$event'])
-  onResizeHandler(e: any) {
+  onResizeHandler(e: any): void {
     const width = e.target.innerWidth
     if (this.isBurgerVisible && width > 768) {
       this.burgerService.switchBurgerVisibleStatus(false)
@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     )
   }
 
-  handleBurgerButton() {
+  handleBurgerButton(): void {
     this.burgerService.switchBurgerVisibleStatus(!this.isBurgerVisible)
   }
 }

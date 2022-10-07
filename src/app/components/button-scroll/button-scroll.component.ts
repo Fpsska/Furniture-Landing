@@ -16,11 +16,11 @@ export class ButtonScrollComponent implements OnInit {
 
   constructor(private scroller: ViewportScroller) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     // console.log(this.anchorID)
   }
 
-  scrollToElement() {
+  scrollToElement(): void {
     this.scroller.scrollToAnchor(this.anchorID)
     console.log('clicked!')
   }

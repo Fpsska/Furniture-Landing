@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 import { IselectButton } from 'src/app/models/selectButtons'
 
@@ -11,7 +11,7 @@ import { selectButtonsData } from 'src/app/data/selectButtonsData'
   templateUrl: './selection.component.html',
   styleUrls: ['./selection.component.scss']
 })
-export class SelectionComponent implements OnInit, OnChanges {
+export class SelectionComponent {
   selectButtonsDataTemplates: IselectButton[] = selectButtonsData
 
   // /. state
@@ -23,16 +23,12 @@ export class SelectionComponent implements OnInit, OnChanges {
 
   constructor() {}
 
-  ngOnInit(): void {}
-
-  ngOnChanges(): void {}
-
-  handleButtonClick(_id: number, reference: string) {
+  handleButtonClick(_id: number, reference: string): void {
     this.updateFilterOption(reference)
     this.changeButtonActiveStatus(_id)
   }
 
-  changeButtonActiveStatus(_id: number) {
+  changeButtonActiveStatus(_id: number): void {
     this.selectButtonsDataTemplates.map(item =>
       item.id === _id ? (item.isActive = true) : (item.isActive = false)
     )

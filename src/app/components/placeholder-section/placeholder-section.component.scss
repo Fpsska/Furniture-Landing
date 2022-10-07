@@ -21,6 +21,10 @@
         align-items: center;
     }
 
+    &__preview {
+        text-align: center;
+    }
+
     &__image {
         width: useRem(300);
         height: useRem(300);
@@ -33,7 +37,7 @@
         text-align: center;
     }
 
-    &__message {
+    &__caption {
         font-size: useRem(18);
         font-style: italic;
         text-align: center;

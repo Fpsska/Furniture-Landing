@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core'
 
 @Component({
   selector: 'app-form-search',
   templateUrl: './form-search.component.html',
   styleUrls: ['./form-search.component.scss']
 })
-export class FormSearchComponent implements OnInit {
+export class FormSearchComponent {
+  constructor() {}
 
-  constructor() { }
+  @ViewChild('inputRef') inputRef: ElementRef<HTMLInputElement>
 
-  ngOnInit(): void {
+  formSubmitHandler(e: SubmitEvent): void {
+    e.preventDefault()
+
+    const inputValue = this.inputRef.nativeElement.value
+    if (inputValue) {
+      this.inputRef.nativeElement.value = ''
+    }
   }
-
 }

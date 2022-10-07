@@ -33,7 +33,7 @@ export class FurnitureComponent implements OnInit {
     private productService: ProductService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     // handle commentsData
     this.isCommentsDataLoading = true
     this.commentService.getComments().subscribe(comments => {
@@ -48,7 +48,7 @@ export class FurnitureComponent implements OnInit {
     })
   }
 
-  updateFilterOption(reference: any): void {
+  updateFilterOption(reference: string): void {
     this.filterOption = reference
   }
 }

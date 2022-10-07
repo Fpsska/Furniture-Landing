@@ -14,7 +14,7 @@ export class StartSectionComponent implements AfterViewInit {
 
   @ViewChild('welcomeSectionRef') welcomeSectionRef: ElementRef<HTMLDivElement>
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     this.scrollService.getWelcomeSectionHeigth(
       this.welcomeSectionRef.nativeElement.offsetHeight
     )

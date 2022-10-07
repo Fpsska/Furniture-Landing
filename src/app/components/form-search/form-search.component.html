@@ -1,5 +1,6 @@
-<form class="form-search">
+<form class="form-search" (submit)="formSubmitHandler($event)">
   <input
+    #inputRef
     class="form-search__input"
     type="text"
     placeholder="Search furniture"

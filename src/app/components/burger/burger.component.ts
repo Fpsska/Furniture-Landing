@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 // /. imports
 
@@ -7,13 +7,11 @@ import { Component, OnInit, Input } from '@angular/core'
   templateUrl: './burger.component.html',
   styleUrls: ['./burger.component.scss']
 })
-export class BurgerComponent implements OnInit {
+export class BurgerComponent {
   @Input() visibleStatus: boolean
   @Input() isHeaderStylized: boolean
 
   // /. props
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

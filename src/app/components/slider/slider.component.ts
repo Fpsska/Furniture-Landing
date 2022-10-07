@@ -85,7 +85,7 @@ export class SliderComponent implements OnChanges {
 
   // /. state
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(changes: SimpleChanges) {
     if (changes.filterOption || changes.role || changes.data) {
       this.defineSliderOptions(this.role, this.data.length)
     }

@@ -18,7 +18,7 @@ export class NavLinkComponent {
 
   constructor(private burgerService: BurgerService) {}
 
-  handleLinkClick(e: any) {
+  handleLinkClick(e: Event): void {
     e.preventDefault()
     this.burgerService.switchBurgerVisibleStatus(false)
   }
