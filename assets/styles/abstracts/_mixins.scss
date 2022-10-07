@@ -1,0 +1,40 @@
+@import './vars';
+
+// /. imports
+
+@mixin hide-text {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin skeleton-animation {
+    background: linear-gradient(120deg,
+            $gray-color 30%,
+            #f2f2f2 38%,
+            #f2f2f2 40%,
+            $gray-color 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-animation: load 2s infinite;
+    animation: skeleton-gradient 2s infinite;
+}
+
+// /. mixins
+
+
+@-webkit-keyframes skeleton-gradient {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+@keyframes skeleton-gradient {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+// /. animations

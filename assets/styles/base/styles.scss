@@ -1,0 +1,286 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'reset.scss';
+@import 'vars.scss';
+@import 'mixins.scss';
+@import 'functions.scss';
+@import 'media.scss';
+
+// /. imports
+
+html,
+body {
+    font-size: #{$font-size}px;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $white-color;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.main {
+    background-color: $white-color;
+}
+
+.container {
+    max-width: useRem(1380);
+    padding: 0 useRem(10);
+    margin: 0 auto;
+}
+
+.container--footer {
+    max-width: useRem(1084);
+}
+
+.container--welcome {
+    max-width: useRem(930);
+}
+
+.container--products {
+    max-width: useRem(1200);
+}
+
+.container--about {
+    max-width: useRem(1440);
+}
+
+.logo {
+    font-size: useRem(28);
+    line-height: useRem(33);
+    letter-spacing: useRem(0.5);
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+.title {
+    font-size: useRem(42);
+    line-height: useRem(49);
+    font-weight: 700;
+    color: $dark-color;
+    margin: useRem(20) 0;
+}
+
+.subtitle {
+    font-size: useRem(18);
+    line-height: useRem(21);
+    font-weight: 600;
+    letter-spacing: useRem(5);
+    text-transform: uppercase;
+    color: $orange-color;
+}
+
+
+.form-search {
+    position: relative;
+
+    &__input {
+        max-width: useRem(344);
+        width: 100%;
+        font-size: useRem(18);
+        background: rgba(255, 255, 255, 0.15);
+        color: $primary-color;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: useRem(42);
+        padding: useRem(15) useRem(36) useRem(15) useRem(20);
+
+        &:focus {
+            border: 1px solid $white-color;
+        }
+
+        &::-webkit-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::-moz-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &:-ms-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::-ms-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: useRem(8);
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $orange-color;
+        width: useRem(40);
+        height: useRem(40);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover svg {
+            stroke: $dark-color;
+        }
+
+        svg {
+            transition: all .25s linear;
+            stroke: $white-color;
+        }
+    }
+}
+
+.features {
+    padding: useRem(120) 0;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        // align-items: center;
+        gap: useRem(30);
+    }
+
+    &__column {
+        grid-column: 3 span;
+    }
+
+    &__title {
+        color: $dark-color;
+        font-weight: 700;
+        font-size: useRem(42);
+        line-height: useRem(49);
+        margin: auto 0;
+    }
+}
+
+
+.products {
+    background-color: $primary-color;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: useRem(138) 0 useRem(50) 0;
+    }
+
+    &__gallery {
+        width: 100%;
+        margin: 0 0 useRem(60) 0;
+        position: relative;
+    }
+
+    &__title {
+        font-size: useRem(42);
+        line-height: useRem(49);
+        font-weight: 700;
+        color: $dark-color;
+        text-align: center;
+    }
+
+    &__selection {
+        margin: useRem(32) 0 useRem(68) 0;
+    }
+}
+
+.about {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: useRem(323) 0 useRem(260) 0;
+    }
+
+    &__preview {
+        position: relative;
+        flex: 0 0 33.3%;
+        height: 100px;
+    }
+
+    &__image {
+        max-width: useRem(665);
+    }
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin: 0 0 useRem(270) 0;
+        }
+
+        .about__image {
+            margin: 0 useRem(20) 0 useRem(-10);
+        }
+    }
+
+    &__section--reverse {
+        flex-direction: row-reverse;
+
+        .about__image {
+            margin: 0 useRem(-10) 0 useRem(20);
+        }
+    }
+
+    &__information {
+        max-width: useRem(550);
+    }
+
+    &__description {
+        font-size: useRem(18);
+        line-height: useRem(22);
+        color: $dark-color;
+        opacity: .8;
+        margin: 0 0 useRem(24) 0;
+    }
+}
+
+.testimonials {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 useRem(244);
+    }
+
+    &__text {
+        text-align: center;
+        margin: 0 0 useRem(60) 0;
+    }
+
+    &__gallery {
+        position: relative;
+    }
+
+}
+
+.placeholder-card {
+    background-color: rgba($color: #444, $alpha: .5);
+    border-radius: useRem(18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: useRem(476);
+    width: 100%;
+
+    &__title {
+        font-size: useRem(16);
+        text-transform: uppercase;
+    }
+}
