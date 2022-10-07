@@ -98,32 +98,29 @@
 .product.loading {
     position: relative;
 
-    &::after {
-        @include skeleton-animation;
-    }
-
-    .product__image {
-        background-color: $primary-color;
-    }
-
     .product__name {
-        background-color: #EEEE;
+        @include skeleton-animation;
         height: useRem(15);
     }
 
     .product__model {
-        background-color: #EEEE;
+        @include skeleton-animation;
         height: useRem(15);
         margin: useRem(10) 0;
     }
 
     .product__price {
-        background-color: #EEEE;
+        @include skeleton-animation;
         height: useRem(20);
         width: useRem(50);
 
         sup {
             display: none;
         }
+    }
+
+    .product__button {
+        @include skeleton-animation;
+        opacity: 1;
     }
 }

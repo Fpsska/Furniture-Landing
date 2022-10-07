@@ -109,12 +109,9 @@
 }
 
 .testimonial.loading {
-    background-color: #DDDBDD;
+    // background-color: #DDDBDD;
+    @include skeleton-animation;
     position: relative;
-
-    &::after {
-        @include skeleton-animation;
-    }
 
     .testimonial__wrapper {
         background-color: $primary-color;
@@ -133,7 +130,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $white-color;
+            background-color: $gray-color;
             width: useRem(45);
             height: useRem(45);
             border-radius: 50%;
@@ -146,17 +143,17 @@
 
     .testimonial__position {
         height: useRem(15);
-        background-color: $white-color;
+        background-color: $gray-color;
     }
 
     .testimonial__name {
         height: useRem(15);
-        background-color: $white-color;
+        background-color: $gray-color;
     }
 
     .testimonial__comment {
         height: useRem(40);
         width: 100%;
-        background-color: $white-color;
+        background-color: $gray-color;
     }
 }

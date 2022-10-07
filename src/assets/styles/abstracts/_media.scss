@@ -1,3 +1,16 @@
+@media screen and (max-width: 1200px) {
+
+    .products .products__gallery .swiper-button.next,
+    .testimonials .testimonials__wrapper .swiper-button.next {
+        right: useRem(-4);
+    }
+
+    .products .products__gallery .swiper-button.prev,
+    .testimonials .testimonials__wrapper .swiper-button.prev {
+        left: useRem(-4);
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .about .about__wrapper {
         padding: useRem(180) 0 useRem(180) 0;
@@ -27,16 +40,6 @@
 
     .testimonials .testimonials__wrapper {
         padding: 0 0 useRem(200) 0;
-    }
-
-    .products .products__gallery .swiper-button.next,
-    .testimonials .testimonials__wrapper .swiper-button.next {
-        right: useRem(-10);
-    }
-
-    .products .products__gallery .swiper-button.prev,
-    .testimonials .testimonials__wrapper .swiper-button.prev {
-        left: useRem(-10);
     }
 
     .features .features__wrapper {

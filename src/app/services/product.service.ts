@@ -19,6 +19,6 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Iproduct[]> {
-    return this.http.get<Iproduct[]>(this.URL).pipe(delay(700))
+    return this.http.get<Iproduct[]>(this.URL).pipe(delay(12312700))
   }
 }

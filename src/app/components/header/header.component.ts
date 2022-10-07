@@ -4,7 +4,8 @@ import {
   OnInit,
   AfterViewInit,
   ViewChild,
-  ElementRef
+  ElementRef,
+  HostListener
 } from '@angular/core'
 
 import { ScrollService } from 'src/app/services/scroll.service'
@@ -38,6 +39,22 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   @ViewChild('headerRef') headerRef: ElementRef<HTMLDivElement>
+
+  @HostListener('window:keydown.escape', ['$event'])
+  keyDownHandler() {
+    if (this.isBurgerVisible) {
+      console.log('cliked')
+      this.burgerService.switchBurgerVisibleStatus(false)
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResizeHandler(e: any) {
+    const width = e.target.innerWidth
+    if (this.isBurgerVisible && width > 768) {
+      this.burgerService.switchBurgerVisibleStatus(false)
+    }
+  }
 
   ngAfterViewInit(): void {
     this.scrollService.getHeaderHeight(

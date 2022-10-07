@@ -6,6 +6,8 @@ import {
   ViewEncapsulation
 } from '@angular/core'
 
+import { Ibreakpont } from 'src/app/models/slider'
+
 // import Swiper core and required modules
 import SwiperCore, { SwiperOptions, Navigation } from 'swiper'
 
@@ -30,7 +32,7 @@ export class SliderComponent implements OnChanges {
 
   currentRenderData: any[] = []
   currentSliderConfig: any = {}
-  currentSliderBPConfig: { [key: number]: { [key: string]: number } } = {}
+  currentSliderBPConfig: Ibreakpont = {}
   currentSliderRole: string = ''
 
   productSliderConfig: SwiperOptions = {
@@ -55,7 +57,7 @@ export class SliderComponent implements OnChanges {
     slidesPerView: 1,
     loop: true
   }
-  productSliderBPConfig: { [key: number]: { [key: string]: number } } = {
+  productSliderBPConfig: Ibreakpont = {
     320: {
       slidesPerView: 1
     },
@@ -69,7 +71,7 @@ export class SliderComponent implements OnChanges {
       slidesPerView: 4
     }
   }
-  testimonialSliderBPConfig: { [key: number]: { [key: string]: number } } = {
+  testimonialSliderBPConfig: Ibreakpont = {
     320: {
       slidesPerView: 1
     },

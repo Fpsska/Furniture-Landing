@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core'
 
-import { IselectButtons } from 'src/app/models/selectButtons'
+import { IselectButton } from 'src/app/models/selectButtons'
 
 import { selectButtonsData } from 'src/app/data/selectButtonsData'
 
@@ -12,7 +12,7 @@ import { selectButtonsData } from 'src/app/data/selectButtonsData'
   styleUrls: ['./selection.component.scss']
 })
 export class SelectionComponent implements OnInit, OnChanges {
-  selectButtonsDataTemplates: IselectButtons[] = selectButtonsData
+  selectButtonsDataTemplates: IselectButton[] = selectButtonsData
 
   // /. state
 
