@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
+###### _powered by :_
+- [mockAPI](https://mockapi.io/)
+- [my-json-server](https://my-json-server.typicode.com/)
+- [swiper](https://swiperjs.com/)
+
+### `Watch demo` _[Furniture-Landing](https://fpsska.github.io/Furniture-Landing/)_
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
