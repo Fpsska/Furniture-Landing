@@ -21,6 +21,7 @@
         position: relative;
         height: useRem(289);
         width: 100%;
+        background-color: $gray-color;
     }
 
     &__image {
@@ -114,7 +115,8 @@
         height: useRem(20);
         width: useRem(50);
 
-        sup {
+        sup,
+        span {
             display: none;
         }
     }

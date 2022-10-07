@@ -270,19 +270,6 @@ body {
 
 }
 
-.placeholder-gallery {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
-    gap: useRem(40);
-}
-
-.placeholder-gallery--products {
-    grid-template-columns: repeat(4, 1fr);
-    gap: useRem(42);
-}
-
 .placeholder-card {
     background-color: rgba($color: #444, $alpha: .5);
     border-radius: useRem(18);

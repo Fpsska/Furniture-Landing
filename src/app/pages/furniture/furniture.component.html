@@ -29,31 +29,12 @@
           ></app-selection>
         </div>
         <div class="products__gallery">
-          <div
-            *ngIf="
-              isProductsDataLoading;
-              then productsPlaceholder;
-              else productsSlider
-            "
-          ></div>
-
-          <ng-template #productsPlaceholder>
-            <div class="placeholder-gallery placeholder-gallery--products">
-              <app-product
-                *ngFor="let product of productsMockData"
-                [item]="product"
-                [loadingStatus]="isProductsDataLoading"
-              ></app-product>
-            </div>
-          </ng-template>
-          <ng-template #productsSlider>
-            <app-slider
-              role="product"
-              [data]="productsData"
-              [filterOption]="filterOption"
-              [loadingStatus]="isProductsDataLoading"
-            ></app-slider>
-          </ng-template>
+          <app-slider
+            role="product"
+            [data]="productsData"
+            [filterOption]="filterOption"
+            [loadingStatus]="isProductsDataLoading"
+          ></app-slider>
         </div>
         <app-button title="View All"></app-button>
       </div>
@@ -111,31 +92,12 @@
         </div>
 
         <div class="testimonials__gallery">
-          <div
-            *ngIf="
-              isCommentsDataLoading;
-              then testimonialsPlaceholder;
-              else testimonialsSlider
-            "
-          ></div>
-
-          <ng-template #testimonialsPlaceholder>
-            <div class="placeholder-gallery">
-              <app-testimonial
-                *ngFor="let comment of commentsMockData"
-                [item]="comment"
-                [loadingStatus]="isCommentsDataLoading"
-              ></app-testimonial>
-            </div>
-          </ng-template>
-          <ng-template #testimonialsSlider>
-            <app-slider
-              role="testimonial"
-              [data]="commentsData"
-              [filterOption]="filterOption"
-              [loadingStatus]="isCommentsDataLoading"
-            ></app-slider>
-          </ng-template>
+          <app-slider
+            role="testimonial"
+            [data]="commentsData"
+            [filterOption]="filterOption"
+            [loadingStatus]="isCommentsDataLoading"
+          ></app-slider>
         </div>
       </div>
     </div>

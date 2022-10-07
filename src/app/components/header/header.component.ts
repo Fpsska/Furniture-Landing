@@ -40,10 +40,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   @ViewChild('headerRef') headerRef: ElementRef<HTMLDivElement>
 
-  @HostListener('window:keydown.escape', ['$event'])
+  @HostListener('window:keydown.escape')
   keyDownHandler() {
     if (this.isBurgerVisible) {
-      console.log('cliked')
       this.burgerService.switchBurgerVisibleStatus(false)
     }
   }
