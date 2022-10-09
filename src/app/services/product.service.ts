@@ -11,7 +11,6 @@ import { Iproduct } from '../models/product'
   providedIn: 'root'
 })
 export class ProductService {
-  productsData: Iproduct[] = []
   URL = 'https://my-json-server.typicode.com/Fpsska/mockjson/products'
 
   // /. state
@@ -19,6 +18,6 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Iproduct[]> {
-    return this.http.get<Iproduct[]>(this.URL).pipe(delay(700))
+    return this.http.get<Iproduct[]>(this.URL).pipe(delay(4500))
   }
 }

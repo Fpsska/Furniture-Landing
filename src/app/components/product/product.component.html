@@ -10,8 +10,15 @@
 
   <div class="product__description">
     <div class="product__top">
-      <span class="product__name" [title]="item.name">{{ item.name }}</span>
-      <h4 class="product__model" [title]="item.model">{{ item.model }}</h4>
+      <span
+        class="product__name"
+        [title]="!loadingStatus ? (!item.name ? 'Untitled' : item.name) : ''"
+      >
+        {{ !loadingStatus ? (!item.name ? 'Untitled' : item.name) : '' }}
+      </span>
+      <h4 class="product__model" [title]="item.model || 'untitled'">
+        {{ !loadingStatus ? (!item.model ? 'Untitled' : item.model) : '' }}
+      </h4>
       <app-rating
         role="interaction"
         [status]="loadingStatus"
@@ -20,9 +27,14 @@
     </div>
 
     <div class="product__bottom">
-      <span class="product__price" [title]="'$' + item.price">
+      <span
+        class="product__price"
+        [title]="!loadingStatus ? (!item.price ? '0' : item.price) : ''"
+      >
         <sup>$</sup>
-        <span>{{ item.price }}</span>
+        <span>
+          {{ !loadingStatus ? (!item.price ? '0' : item.price) : '' }}
+        </span>
       </span>
       <button
         class="product__button"

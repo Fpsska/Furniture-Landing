@@ -17,14 +17,26 @@
     </div>
 
     <div class="testimonial__information">
-      <address class="testimonial__name" [title]="item.name">
-        {{ item.name }}
+      <address
+        class="testimonial__name"
+        [title]="!loadingStatus ? (!item.name ? 'Untitled' : item.name) : ''"
+      >
+        {{ !loadingStatus ? (!item.name ? 'Untitled' : item.name) : '' }}
       </address>
-      <span class="testimonial__position" [title]="item.position">
-        {{ item.position }}
+      <span
+        class="testimonial__position"
+        [title]="
+          !loadingStatus ? (!item.position ? 'Untitled' : item.position) : ''
+        "
+      >
+        {{
+          !loadingStatus ? (!item.position ? 'Untitled' : item.position) : ''
+        }}
       </span>
       <blockquote class="testimonial__comment">
-        <p>{{ item.message }}</p>
+        <p>
+          {{ !loadingStatus ? (!item.message ? 'no data' : item.message) : '' }}
+        </p>
       </blockquote>
       <app-rating
         role="review"

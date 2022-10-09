@@ -13,7 +13,7 @@ export class RatingComponent implements OnChanges {
   @Input() role: string
   @Input() status: boolean
   @Input() name: string
-  @Input() rating?: number
+  @Input() rating?: number = 0
 
   // /. props
 
