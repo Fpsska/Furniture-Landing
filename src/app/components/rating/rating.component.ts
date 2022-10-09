@@ -10,8 +10,10 @@ import { Irating } from 'src/app/models/rating'
   styleUrls: ['./rating.component.scss']
 })
 export class RatingComponent implements OnChanges {
+  @Input() role: string
   @Input() status: boolean
   @Input() name: string
+  @Input() rating?: number
 
   // /. props
 
@@ -27,13 +29,19 @@ export class RatingComponent implements OnChanges {
         return { id: index + 1, name: this.name, isChecked: false }
       })
     }
+    if (changes.rating) {
+      const userRating = +String(this.rating)[0]
+      this.ratingDataTemplates.map(item => {
+        item.id === userRating
+          ? (item.isChecked = true)
+          : (item.isChecked = false)
+      })
+    }
   }
 
   handleInputClick(id: number): void {
-    console.log(id)
     this.ratingDataTemplates.map(item =>
       item.id === id ? (item.isChecked = true) : (item.isChecked = false)
     )
-    console.log(this.ratingDataTemplates)
   }
 }

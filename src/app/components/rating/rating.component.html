@@ -7,8 +7,8 @@
       [name]="rating.name"
       [id]="rating.id + '-' + rating.name"
       [checked]="rating.isChecked"
-      [disabled]="status"
-      (change)="handleInputClick(rating.id)"
+      [disabled]="status || role !== 'interaction'"
+      (change)="role === 'interaction' && handleInputClick(rating.id)"
     />
     <label class="rating__label" [for]="rating.id + '-' + rating.name">
       <svg

@@ -12,7 +12,11 @@
     <div class="product__top">
       <span class="product__name" [title]="item.name">{{ item.name }}</span>
       <h4 class="product__model" [title]="item.model">{{ item.model }}</h4>
-      <app-rating [status]="loadingStatus" [name]="item.model"></app-rating>
+      <app-rating
+        role="interaction"
+        [status]="loadingStatus"
+        [name]="item.model"
+      ></app-rating>
     </div>
 
     <div class="product__bottom">

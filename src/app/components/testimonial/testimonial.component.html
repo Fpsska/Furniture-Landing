@@ -26,7 +26,12 @@
       <blockquote class="testimonial__comment">
         <p>{{ item.message }}</p>
       </blockquote>
-      <app-rating [status]="loadingStatus"></app-rating>
+      <app-rating
+        role="review"
+        [status]="loadingStatus"
+        [name]="item.name"
+        [rating]="item.rating"
+      ></app-rating>
     </div>
   </div>
 </article>
