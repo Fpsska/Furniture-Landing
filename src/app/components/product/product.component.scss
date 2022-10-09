@@ -68,11 +68,13 @@
         width: useRem(48);
         height: useRem(48);
         background-color: #0D1B39;
+        border: useRem(1) transparent;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
+        transition: all .3s ease-in-out;
 
         &:disabled {
             opacity: 0.3;
@@ -92,6 +94,28 @@
         svg {
             fill: $white-color;
             transition: all .3s linear;
+        }
+    }
+
+    &__button.active {
+
+        background-color: $gray-color;
+        border: useRem(1) dashed #0D1B39;
+
+        svg {
+            stroke: $dark-color;
+            fill: rgb(51, 255, 0);
+            width: useRem(20);
+            height: useRem(20);
+        }
+
+        &:hover {
+            background-color: rgba($color: red, $alpha: .2);
+        }
+
+        &:hover svg {
+            fill: rgba($color: red, $alpha: .2);
+            transform: none;
         }
     }
 }

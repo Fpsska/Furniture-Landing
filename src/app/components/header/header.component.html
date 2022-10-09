@@ -15,7 +15,11 @@
       ></app-burger>
 
       <div class="header__buttons">
-        <button class="header__button" aria-label="open basket" data-count="0">
+        <button
+          class="header__button"
+          aria-label="open basket"
+          [attr.data-count]="basketProductCount"
+        >
           <svg
             width="34"
             height="34"

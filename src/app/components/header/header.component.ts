@@ -10,6 +10,7 @@ import {
 
 import { ScrollService } from 'src/app/services/scroll.service'
 import { BurgerService } from 'src/app/services/burger.service'
+import { ProductService } from 'src/app/services/product.service'
 
 // /. imports
 
@@ -24,17 +25,22 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   // /. props
 
   isBurgerVisible: boolean = false
+  basketProductCount: number = 0
 
   // /. state
 
   constructor(
     private scrollService: ScrollService,
-    private burgerService: BurgerService
+    private burgerService: BurgerService,
+    private productService: ProductService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.burgerService.getBurgerVisibleStatus().subscribe(status => {
       this.isBurgerVisible = status
+    })
+    this.productService.getSelectedProductsCount().subscribe(quantity => {
+      this.basketProductCount = quantity
     })
   }
 
