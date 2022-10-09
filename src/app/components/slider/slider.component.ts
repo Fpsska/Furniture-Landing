@@ -94,7 +94,7 @@ export class SliderComponent implements OnChanges {
   defineSliderOptions(role: string, arrayLength: number): void {
     switch (role) {
       case 'product':
-        console.log('product')
+        // console.log('product')
         this.currentRenderData = this.data
         this.currentSliderConfig =
           arrayLength !== 0 ? this.productSliderConfig : this.emptySliderConfig
@@ -102,7 +102,7 @@ export class SliderComponent implements OnChanges {
         this.currentSliderRole = role
         break
       case 'testimonial':
-        console.log('testimonial')
+        // console.log('testimonial')
         this.currentRenderData = this.data
         this.currentSliderConfig =
           arrayLength !== 0
@@ -112,7 +112,7 @@ export class SliderComponent implements OnChanges {
         this.currentSliderRole = role
         break
       default:
-        console.log('default')
+        // console.log('default')
         this.currentSliderConfig = this.emptySliderConfig
     }
   }
