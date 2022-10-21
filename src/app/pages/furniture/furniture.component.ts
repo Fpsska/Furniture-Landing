@@ -42,7 +42,7 @@ export class FurnitureComponent implements OnInit {
     })
     // handle productsData
     this.isProductsDataLoading = true
-    this.productService.getProducts().subscribe(products => {
+    this.productService.getProducts().subscribe(({ products }) => {
       this.productsData = products
       // save data for service
       this.productService.saveProductsData(products)

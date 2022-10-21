@@ -11,7 +11,8 @@ import { Iproduct } from '../models/product'
   providedIn: 'root'
 })
 export class ProductService {
-  private URL = 'https://my-json-server.typicode.com/Fpsska/mockjson/products'
+  private URL =
+    'https://my-json-server.typicode.com/Fpsska/mockjson/furnitureLandingDB'
   productsData: Iproduct[] = []
   selectedProducts: Iproduct[] = []
   selectedProductsCount = new BehaviorSubject<number>(0)
@@ -20,9 +21,9 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Iproduct[]> {
+  getProducts(): Observable<any> {
     console.log('getProducts')
-    return this.http.get<Iproduct[]>(this.URL).pipe(delay(4500))
+    return this.http.get<any>(this.URL).pipe(delay(4500))
   }
 
   saveProductsData(data: Iproduct[]): void {
