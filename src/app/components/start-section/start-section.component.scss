@@ -4,9 +4,12 @@
 
 // /. imports
 
+:host {
+    flex: 1 0 100%;
+}
+
 .welcome {
     background-image: url(../../../assets/images/section-background.png);
-    // background-image: url(./assets/images/section-background_full.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,9 +17,7 @@
 
     position: relative;
 
-    // height: 100vh;
-    // height: useRem(1084);
-    min-height: useRem(1084);
+    height: 100%;
 
     &__wrapper {
         display: flex;
