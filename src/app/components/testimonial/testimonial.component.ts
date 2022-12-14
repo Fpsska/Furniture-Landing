@@ -19,10 +19,10 @@ export class TestimonialComponent {
     const target = e.target as HTMLImageElement
     switch (role) {
       case 'avatar':
-        target.src = 'https://via.placeholder.com/50x50'
+        target.src = 'https://fakeimg.pl/50x50/282828/eae0d0/?retina=1'
         break
       case 'background':
-        target.src = 'https://via.placeholder.com/370x475'
+        target.src = 'https://fakeimg.pl/370x475/282828/eae0d0/?retina=1'
     }
   }
 }

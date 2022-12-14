@@ -23,10 +23,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/assets/styles/base/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/assets/styles/base/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/assets/styles/abstracts"]
+              "includePaths": [
+                "src/assets/styles/abstracts"
+              ]
             },
             "scripts": []
           },
@@ -40,7 +47,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "5kb",
                   "maximumError": "8kb"
                 }
               ],
@@ -89,10 +96,17 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/assets/styles/base/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/assets/styles/base/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/assets/styles/abstracts"]
+              "includePaths": [
+                "src/assets/styles/abstracts"
+              ]
             },
             "scripts": []
           }

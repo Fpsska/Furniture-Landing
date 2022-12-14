@@ -41,6 +41,6 @@ export class ProductComponent {
 
   handleImageError(e: Event): void {
     const target = e.target as HTMLImageElement
-    target.src = 'https://via.placeholder.com/260x280'
+    target.src = 'https://fakeimg.pl/260x280/282828/eae0d0/?retina=1'
   }
 }

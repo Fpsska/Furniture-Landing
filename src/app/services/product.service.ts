@@ -23,7 +23,7 @@ export class ProductService {
 
   getProducts(): Observable<any> {
     console.log('getProducts')
-    return this.http.get<any>(this.URL).pipe(delay(4500))
+    return this.http.get<any>(this.URL).pipe(delay(6500))
   }
 
   saveProductsData(data: Iproduct[]): void {
