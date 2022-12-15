@@ -4,8 +4,14 @@
 
 // /. imports
 
-.error {
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
+.error {
     &__wrapper {
         display: flex;
         flex-direction: column;

@@ -4,10 +4,6 @@
 
 // /. imports
 
-:host {
-    flex: 1 0 100%;
-}
-
 .welcome {
     background-image: url(../../../assets/images/section-background.png);
     background-size: cover;
@@ -16,8 +12,10 @@
     background-color: #222;
 
     position: relative;
+    height: 100vh;
 
-    height: 100%;
+    display: flex;
+    align-items: center;
 
     &__wrapper {
         display: flex;

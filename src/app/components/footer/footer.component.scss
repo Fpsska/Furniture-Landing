@@ -26,7 +26,6 @@
 
     &__text {
         grid-column: 4 span;
-        // max-width: useRem(300);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -58,7 +57,7 @@
 
     a {
         color: $dark-color;
-        font-size: 500;
+        // font-size: 500;
     }
 
     &__copyright {

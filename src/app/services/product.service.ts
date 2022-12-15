@@ -22,19 +22,19 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<any> {
-    console.log('getProducts')
+    // console.log('getProducts')
     return this.http.get<any>(this.URL).pipe(delay(6500))
   }
 
   saveProductsData(data: Iproduct[]): void {
     this.productsData = data
-    console.log('productsData', this.productsData)
+    // console.log('productsData', this.productsData)
   }
 
   saveSelectedProduct(product: Iproduct): void {
     this.selectedProducts.push(product)
     this.selectedProductsCount.next(this.selectedProducts.length)
-    console.log('selectedProducts', this.selectedProducts)
+    // console.log('selectedProducts', this.selectedProducts)
   }
 
   removeSelectedProduct(_id: number): void {
