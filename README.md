@@ -9,6 +9,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### `Watch demo` _[Furniture-Landing](https://fpsska.github.io/Furniture-Landing/)_
 
+_use_ 
+```js
+ng deploy --base-href=https://fpsska.github.io/Furniture-Landing/ 
+```
+_for deployment_
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
