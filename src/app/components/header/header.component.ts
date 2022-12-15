@@ -8,6 +8,8 @@ import {
   HostListener
 } from '@angular/core'
 
+import { Router } from '@angular/router'
+
 import { ScrollService } from 'src/app/services/scroll.service'
 import { BurgerService } from 'src/app/services/burger.service'
 import { ProductService } from 'src/app/services/product.service'
@@ -32,7 +34,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   constructor(
     private scrollService: ScrollService,
     private burgerService: BurgerService,
-    private productService: ProductService
+    private productService: ProductService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -69,5 +72,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   handleBurgerButton(): void {
     this.burgerService.switchBurgerVisibleStatus(!this.isBurgerVisible)
+  }
+
+  handleLogoLinkClick(e: Event): void {
+    e.preventDefault()
+    this.router.navigate(['/'])
   }
 }

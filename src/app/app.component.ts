@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core'
+import { Component, HostListener, OnInit } from '@angular/core'
 
 import { ScrollService } from './services/scroll.service'
 
@@ -16,12 +16,20 @@ export class AppComponent {
 
   constructor(private scrollService: ScrollService) {}
 
+  ngOnInit() {
+    const isSectionHeightExist = this.scrollService.welcomeSectionHeigth
+    if (!isSectionHeightExist) {
+      this.isHeaderStylized = true
+    }
+  }
+
   @HostListener('window:scroll') // + automatic unsubscribe of eventListener when component was deleted
   handleStickyHeader(): void {
-    if (
+    const isValidBreakpoint =
       window.scrollY + this.scrollService.headerHeight >
       this.scrollService.welcomeSectionHeigth
-    ) {
+
+    if (isValidBreakpoint) {
       this.isHeaderStylized = true
     } else {
       this.isHeaderStylized = false
