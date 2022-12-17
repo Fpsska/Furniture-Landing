@@ -1,0 +1,72 @@
+@import 'vars.scss';
+@import 'functions.scss';
+
+// /. imports
+
+.form-search {
+    position: relative;
+
+    &__input {
+        max-width: useRem(344);
+        width: 100%;
+        font-size: useRem(18);
+        background: rgba(255, 255, 255, 0.15);
+        color: $primary-color;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: useRem(42);
+        padding: useRem(15) useRem(50) useRem(15) useRem(20);
+
+        &:focus {
+            border: 1px solid $white-color;
+        }
+
+        &::-webkit-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::-moz-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &:-ms-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::-ms-input-placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+
+        &::placeholder {
+            font-size: useRem(18);
+            color: $white-color;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: useRem(8);
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $orange-color;
+        width: useRem(40);
+        height: useRem(40);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover svg {
+            stroke: $dark-color;
+        }
+
+        svg {
+            transition: all .25s linear;
+            stroke: $white-color;
+        }
+    }
+}
