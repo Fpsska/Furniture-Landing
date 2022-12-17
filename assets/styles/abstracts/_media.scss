@@ -1,4 +1,10 @@
 @media screen and (max-width: 1200px) {
+    .about__section.about__section--reverse {
+
+        .about__image {
+            flex: 0 0 useRem(600);
+        }
+    }
 
     .products .products__gallery .swiper-button.next,
     .testimonials .testimonials__wrapper .swiper-button.next {
@@ -12,12 +18,25 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .container.container {
+        padding: 0 useRem(40);
+    }
+
     .about .about__wrapper {
-        padding: useRem(180) 0 useRem(180) 0;
+        padding: useRem(150) 0;
     }
 
     .about .about__section {
         flex-direction: column;
+        align-items: stretch;
+
+        .about__image {
+            min-width: 100%;
+
+            img {
+                min-height: 100%;
+            }
+        }
 
         &:not(:last-child) {
             margin: 0 0 useRem(150) 0;
@@ -26,15 +45,13 @@
 
     .about .about__section {
         .about__image {
-            margin: 0 0 useRem(20) 0;
+            margin: 0 0 useRem(40) useRem(-40);
         }
     }
 
     .about__section.about__section--reverse {
-        flex-direction: column;
-
         .about__image {
-            margin: 0 0 useRem(20) 0;
+            margin: 0 useRem(-40) useRem(40) 0;
         }
     }
 
@@ -58,14 +75,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .page .main .welcome {
-        min-height: useRem(850);
-    }
-
-    .about .about__image {
-        max-width: 100%;
-    }
-
     .header .header__wrapper .header__nav {
         display: none;
     }
@@ -120,7 +129,7 @@
 
 @media screen and (max-width: 475px) {
     .welcome .welcome__wrapper .welcome__title {
-        font-size: useRem(50);
+        font-size: useRem(44);
     }
 
     .products .container .products__selection {
